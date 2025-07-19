@@ -1,0 +1,20 @@
+x={
+    "one":{
+        "one_1":{
+            "one_1_1":[1,True,False,"farzane"]
+        }
+    },
+    "two":{
+        "two_1":{
+            "two_1_1":[1,3,False,"hamide"]
+        },
+        "two_2":{
+            "two_2_1":[True,12,False,"siavsh"]
+        },
+    },
+    "three":{
+        "three_1":{
+            "three_1_1":[6,3,"hamide"]
+        }
+    }
+}

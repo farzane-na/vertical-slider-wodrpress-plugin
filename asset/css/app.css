@@ -1,0 +1,54 @@
+html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #000;
+      font-size: 14px;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+    }
+
+    body {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+.swiper.cafeSwiper {
+  width: 320px !important;
+  height: 500px !important;
+  overflow: hidden;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 20px;
+}
+
+.product-image-wrapper{
+  width: 100%;
+  overflow: hidden;
+}
+.product-image-wrapper img{
+  width: 100px;
+  object-fit: cover;
+}
+.product-content{
+  display: flex ;
+  flex-direction: column;
+}

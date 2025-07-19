@@ -1,0 +1,227 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: vertical slider\n"
+"POT-Creation-Date: 2025-07-19 15:05+0330\n"
+"PO-Revision-Date: 2025-07-19 15:05+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: vertical-slider.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin/theme
+#: widgets/vertical-slider-widget.php:28
+msgid "vertical slider"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:69
+msgid "card layout"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:76
+msgid "direction"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:80
+msgid "row"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:84
+msgid "row reverse"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:88
+msgid "column"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:92
+msgid "column reverse"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:105
+msgid "Justify Content"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:109
+#: widgets/vertical-slider-widget.php:147
+msgid "flex start"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:113
+#: widgets/vertical-slider-widget.php:151
+msgid "center"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:117
+#: widgets/vertical-slider-widget.php:155
+msgid "flex end"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:121
+msgid "space between"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:125
+msgid "space around"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:129
+msgid "space evenly"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:142
+msgid "Align Items"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:159
+msgid "stretch"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:171
+msgid "gap"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:191
+msgid "Query"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:198
+msgid "Post Type"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:202
+msgid "Posts"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:203
+msgid "Products"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:204
+msgid "Pages"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:211
+msgid "Filter by Term"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:224
+msgid "content style"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:231
+msgid "Title Color"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:243
+#: widgets/vertical-slider-widget.php:294
+msgid "Typography"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:250
+#: widgets/vertical-slider-widget.php:301
+#: widgets/vertical-slider-widget.php:351
+msgid "Alignment"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:254
+#: widgets/vertical-slider-widget.php:305
+#: widgets/vertical-slider-widget.php:355
+msgid "right"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:258
+#: widgets/vertical-slider-widget.php:359
+msgid "Center"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:262
+#: widgets/vertical-slider-widget.php:313
+#: widgets/vertical-slider-widget.php:363
+msgid "left"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:282
+msgid "caption color"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:309
+msgid "cenetr"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:332
+msgid "price color"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:344
+msgid "typography"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:377
+msgid "card style"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:385
+msgid "cart background"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:393
+msgid "Border"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:401
+msgid "Border Radius"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:413
+msgid "cart shadow"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:420
+msgid "cart padding"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:432
+msgid "product image"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:439
+msgid "border radius image"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:451
+msgid "icons"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:458
+msgid "عرض کارت"
+msgstr ""
+
+#: widgets/vertical-slider-widget.php:483
+msgid "icons color"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A slider that is displayed vertically and is suitable for mobile devices."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "farzane nazmabadi"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://farzanenazmabadi.ir/"
+msgstr ""

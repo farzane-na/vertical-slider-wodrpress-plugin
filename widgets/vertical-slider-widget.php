@@ -455,7 +455,7 @@ $this->start_controls_section(
 $this->add_responsive_control(
     'icon_width',
     [
-        'label' => esc_html__( 'عرض کارت', 'text-domain' ),
+        'label' => esc_html__( 'card width', 'text-domain' ),
         'type' => \Elementor\Controls_Manager::SLIDER,
         'size_units' => [ 'px', '%', 'vw' ],
         'range' => [

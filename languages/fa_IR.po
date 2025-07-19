@@ -1,0 +1,224 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"Project-Id-Version: vertical slider\n"
+"POT-Creation-Date: 2025-07-19 15:05+0330\n"
+"PO-Revision-Date: 2025-07-19 15:13+0330\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: vertical-slider.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: fa_IR\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin/theme
+#: widgets/vertical-slider-widget.php:28
+msgid "vertical slider"
+msgstr "اسلایدر عمودی"
+
+#: widgets/vertical-slider-widget.php:69
+msgid "card layout"
+msgstr "طرح بندی کارت"
+
+#: widgets/vertical-slider-widget.php:76
+msgid "direction"
+msgstr "جهت"
+
+#: widgets/vertical-slider-widget.php:80
+msgid "row"
+msgstr "افقی"
+
+#: widgets/vertical-slider-widget.php:84
+msgid "row reverse"
+msgstr "افقی معکوس"
+
+#: widgets/vertical-slider-widget.php:88
+msgid "column"
+msgstr "ستونی"
+
+#: widgets/vertical-slider-widget.php:92
+msgid "column reverse"
+msgstr "ستونی معکوس"
+
+#: widgets/vertical-slider-widget.php:105
+msgid "Justify Content"
+msgstr "تراز کردن محتوا"
+
+#: widgets/vertical-slider-widget.php:109
+#: widgets/vertical-slider-widget.php:147
+msgid "flex start"
+msgstr "ابتدا"
+
+#: widgets/vertical-slider-widget.php:113
+#: widgets/vertical-slider-widget.php:151
+msgid "center"
+msgstr "وسط"
+
+#: widgets/vertical-slider-widget.php:117
+#: widgets/vertical-slider-widget.php:155
+msgid "flex end"
+msgstr "انتها"
+
+#: widgets/vertical-slider-widget.php:121
+msgid "space between"
+msgstr "فاصله بینابینی"
+
+#: widgets/vertical-slider-widget.php:125
+msgid "space around"
+msgstr "فاصله اطراف"
+
+#: widgets/vertical-slider-widget.php:129
+msgid "space evenly"
+msgstr "فاصله یکنواخت"
+
+#: widgets/vertical-slider-widget.php:142
+msgid "Align Items"
+msgstr "تراز موارد"
+
+#: widgets/vertical-slider-widget.php:159
+msgid "stretch"
+msgstr "کشیده"
+
+#: widgets/vertical-slider-widget.php:171
+msgid "gap"
+msgstr "گپ"
+
+#: widgets/vertical-slider-widget.php:191
+msgid "Query"
+msgstr "کوئری"
+
+#: widgets/vertical-slider-widget.php:198
+msgid "Post Type"
+msgstr "نوع نوشته"
+
+#: widgets/vertical-slider-widget.php:202
+msgid "Posts"
+msgstr "نوشته ها"
+
+#: widgets/vertical-slider-widget.php:203
+msgid "Products"
+msgstr "محصولات"
+
+#: widgets/vertical-slider-widget.php:204
+msgid "Pages"
+msgstr "برگه ها"
+
+#: widgets/vertical-slider-widget.php:211
+msgid "Filter by Term"
+msgstr "فیلتر بر اساس term"
+
+#: widgets/vertical-slider-widget.php:224
+msgid "content style"
+msgstr "استایل محتوا"
+
+#: widgets/vertical-slider-widget.php:231
+msgid "Title Color"
+msgstr "رنگ عنوان"
+
+#: widgets/vertical-slider-widget.php:243
+#: widgets/vertical-slider-widget.php:294
+msgid "Typography"
+msgstr "تایپوگرافی"
+
+#: widgets/vertical-slider-widget.php:250
+#: widgets/vertical-slider-widget.php:301
+#: widgets/vertical-slider-widget.php:351
+msgid "Alignment"
+msgstr "ترازبندی"
+
+#: widgets/vertical-slider-widget.php:254
+#: widgets/vertical-slider-widget.php:305
+#: widgets/vertical-slider-widget.php:355
+msgid "right"
+msgstr "راست"
+
+#: widgets/vertical-slider-widget.php:258
+#: widgets/vertical-slider-widget.php:359
+msgid "Center"
+msgstr "وسط"
+
+#: widgets/vertical-slider-widget.php:262
+#: widgets/vertical-slider-widget.php:313
+#: widgets/vertical-slider-widget.php:363
+msgid "left"
+msgstr "چپ"
+
+#: widgets/vertical-slider-widget.php:282
+msgid "caption color"
+msgstr "رنگ کپشن"
+
+#: widgets/vertical-slider-widget.php:309
+msgid "cenetr"
+msgstr "وسط"
+
+#: widgets/vertical-slider-widget.php:332
+msgid "price color"
+msgstr "رنگ قیمت"
+
+#: widgets/vertical-slider-widget.php:344
+msgid "typography"
+msgstr "تایپوگرافی"
+
+#: widgets/vertical-slider-widget.php:377
+msgid "card style"
+msgstr "استایل کارت"
+
+#: widgets/vertical-slider-widget.php:385
+msgid "cart background"
+msgstr "پس زمینه کارت"
+
+#: widgets/vertical-slider-widget.php:393
+msgid "Border"
+msgstr "حاشیه"
+
+#: widgets/vertical-slider-widget.php:401
+msgid "Border Radius"
+msgstr "انحنای حاشیه"
+
+#: widgets/vertical-slider-widget.php:413
+msgid "cart shadow"
+msgstr "سایه جعبه"
+
+#: widgets/vertical-slider-widget.php:420
+msgid "cart padding"
+msgstr "فاصله داخلی جعبه"
+
+#: widgets/vertical-slider-widget.php:432
+msgid "product image"
+msgstr "تصویر محصول"
+
+#: widgets/vertical-slider-widget.php:439
+msgid "border radius image"
+msgstr "انحنای حاشیه تصویر"
+
+#: widgets/vertical-slider-widget.php:451
+msgid "icons"
+msgstr "آیکون"
+
+#: widgets/vertical-slider-widget.php:458
+msgid "عرض کارت"
+msgstr "عرض کارت"
+
+#: widgets/vertical-slider-widget.php:483
+msgid "icons color"
+msgstr "رنگ آیکون"
+
+#. Description of the plugin/theme
+msgid "A slider that is displayed vertically and is suitable for mobile devices."
+msgstr "اسلایدری که به صورت عمودی نمایش داده می‌شود و برای دستگاه‌های تلفن همراه مناسب است."
+
+#. Author of the plugin/theme
+msgid "farzane nazmabadi"
+msgstr "فرزانه نظم آبادی"
+
+#. Author URI of the plugin/theme
+msgid "https://farzanenazmabadi.ir/"
+msgstr "https://farzanenazmabadi.ir/"

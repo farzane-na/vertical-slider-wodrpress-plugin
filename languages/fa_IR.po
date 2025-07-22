@@ -1,25 +1,194 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
-"Project-Id-Version: vertical slider\n"
-"POT-Creation-Date: 2025-07-19 15:05+0330\n"
-"PO-Revision-Date: 2025-07-19 15:13+0330\n"
+"Project-Id-Version: custom elementor widget\n"
+"POT-Creation-Date: 2025-07-22 15:55+0330\n"
+"PO-Revision-Date: 2025-07-22 16:00+0330\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "X-Generator: Poedit 2.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: vertical-slider.php\n"
+"X-Poedit-WPHeader: custom-elementor-widget.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: fa_IR\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#. Plugin Name of the plugin/theme
+#: widgets/product-category-widget.php:24
+msgid "Product Categories widget"
+msgstr "ویجت دسته بندی محصولات"
+
+#: widgets/product-category-widget.php:61
+msgid "Layout"
+msgstr "طرح بندی"
+
+#: widgets/product-category-widget.php:71
+msgid "Categories Count"
+msgstr "تعداد دسته بندی ها"
+
+#: widgets/product-category-widget.php:82
+#: widgets/vertical-slider-widget.php:191
+msgid "Query"
+msgstr "کوئری"
+
+#: widgets/product-category-widget.php:90
+msgid "Source"
+msgstr "منبع"
+
+#: widgets/product-category-widget.php:93
+msgid "Show All"
+msgstr "نمایش همه"
+
+#: widgets/product-category-widget.php:94
+msgid "Manual Selection"
+msgstr "انتخاب دستی"
+
+#: widgets/product-category-widget.php:95
+msgid "By Parent"
+msgstr "به وسیله والد"
+
+#: widgets/product-category-widget.php:96
+msgid "Current Subcategories"
+msgstr "زیر دسته در جریان"
+
+#: widgets/product-category-widget.php:112
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: widgets/product-category-widget.php:124
+msgid "Only Top Level"
+msgstr "فقط سطح بالا"
+
+#: widgets/product-category-widget.php:128
+msgid "Parent"
+msgstr "والد"
+
+#: widgets/product-category-widget.php:141
+msgid "Hide Empty"
+msgstr "پنهان کردن خالی"
+
+#: widgets/product-category-widget.php:152
+msgid "Order By"
+msgstr "مرتب سازی بر اساس"
+
+#: widgets/product-category-widget.php:156
+msgid "Name"
+msgstr "نام"
+
+#: widgets/product-category-widget.php:157
+msgid "Slug"
+msgstr "اسلاگ"
+
+#: widgets/product-category-widget.php:158
+msgid "Description"
+msgstr "توضیحات"
+
+#: widgets/product-category-widget.php:159
+#: widgets/product-category-widget.php:349
+msgid "Count"
+msgstr "تعداد"
+
+#: widgets/product-category-widget.php:167
+msgid "Order"
+msgstr "ترتیب"
+
+#: widgets/product-category-widget.php:171
+msgid "ASC"
+msgstr "صعودی"
+
+#: widgets/product-category-widget.php:172
+msgid "DESC"
+msgstr "نرولی"
+
+#: widgets/product-category-widget.php:182
+#: widgets/vertical-slider-widget.php:203
+msgid "Products"
+msgstr "محصولات"
+
+#: widgets/product-category-widget.php:192
+msgid ""
+"The style of this widget is often affected by your theme and plugins. If you "
+"experience any such issue, try to switch to a basic theme and deactivate "
+"related plugins."
+msgstr ""
+"سبک این ویجت اغلب تحت تأثیر قالب و افزونه‌های شما قرار می‌گیرد. اگر با چنین "
+"مشکلی مواجه شدید، سعی کنید قالب را به یک قالب ساده تغییر دهید و افزونه‌های "
+"مرتبط را غیرفعال کنید."
+
+#: widgets/product-category-widget.php:208
+msgid "Columns Gap"
+msgstr "گپ ستون ها"
+
+#: widgets/product-category-widget.php:228
+msgid "Rows Gap"
+msgstr "گپ ردیف ها"
+
+#: widgets/product-category-widget.php:248
+#: widgets/vertical-slider-widget.php:250
+#: widgets/vertical-slider-widget.php:301
+#: widgets/vertical-slider-widget.php:351
+msgid "Alignment"
+msgstr "ترازبندی"
+
+#: widgets/product-category-widget.php:252
+msgid "Left"
+msgstr "چپ"
+
+#: widgets/product-category-widget.php:256
+#: widgets/vertical-slider-widget.php:258
+#: widgets/vertical-slider-widget.php:359
+msgid "Center"
+msgstr "وسط"
+
+#: widgets/product-category-widget.php:260
+msgid "Right"
+msgstr "راست"
+
+#: widgets/product-category-widget.php:274
+msgid "Image"
+msgstr "تصویر"
+
+#: widgets/product-category-widget.php:291
+#: widgets/vertical-slider-widget.php:401
+msgid "Border Radius"
+msgstr "انحنای حاشیه"
+
+#: widgets/product-category-widget.php:303
+msgid "Spacing"
+msgstr "فاصله"
+
+#: widgets/product-category-widget.php:315
+msgid "Title"
+msgstr "عنوان"
+
+#: widgets/product-category-widget.php:324
+#: widgets/product-category-widget.php:358
+msgid "Color"
+msgstr "رنگ"
+
+#: widgets/product-category-widget.php:381
+msgid "wrapper style"
+msgstr "استایل نگهدارنده"
+
+#: widgets/product-category-widget.php:388
+msgid "wrapper padding"
+msgstr "فاصله داخلی نگهدارنده"
+
+#: widgets/product-category-widget.php:400
+msgid "wrapepr background"
+msgstr "پس زمینه نگهدارنده"
+
+#: widgets/product-category-widget.php:409
+msgid "wrapper shadow"
+msgstr "سایه نگهدارنده"
+
 #: widgets/vertical-slider-widget.php:28
 msgid "vertical slider"
 msgstr "اسلایدر عمودی"
@@ -91,10 +260,6 @@ msgstr "کشیده"
 msgid "gap"
 msgstr "گپ"
 
-#: widgets/vertical-slider-widget.php:191
-msgid "Query"
-msgstr "کوئری"
-
 #: widgets/vertical-slider-widget.php:198
 msgid "Post Type"
 msgstr "نوع نوشته"
@@ -102,10 +267,6 @@ msgstr "نوع نوشته"
 #: widgets/vertical-slider-widget.php:202
 msgid "Posts"
 msgstr "نوشته ها"
-
-#: widgets/vertical-slider-widget.php:203
-msgid "Products"
-msgstr "محصولات"
 
 #: widgets/vertical-slider-widget.php:204
 msgid "Pages"
@@ -128,22 +289,11 @@ msgstr "رنگ عنوان"
 msgid "Typography"
 msgstr "تایپوگرافی"
 
-#: widgets/vertical-slider-widget.php:250
-#: widgets/vertical-slider-widget.php:301
-#: widgets/vertical-slider-widget.php:351
-msgid "Alignment"
-msgstr "ترازبندی"
-
 #: widgets/vertical-slider-widget.php:254
 #: widgets/vertical-slider-widget.php:305
 #: widgets/vertical-slider-widget.php:355
 msgid "right"
 msgstr "راست"
-
-#: widgets/vertical-slider-widget.php:258
-#: widgets/vertical-slider-widget.php:359
-msgid "Center"
-msgstr "وسط"
 
 #: widgets/vertical-slider-widget.php:262
 #: widgets/vertical-slider-widget.php:313
@@ -172,24 +322,20 @@ msgid "card style"
 msgstr "استایل کارت"
 
 #: widgets/vertical-slider-widget.php:385
-msgid "cart background"
+msgid "card background"
 msgstr "پس زمینه کارت"
 
 #: widgets/vertical-slider-widget.php:393
 msgid "Border"
 msgstr "حاشیه"
 
-#: widgets/vertical-slider-widget.php:401
-msgid "Border Radius"
-msgstr "انحنای حاشیه"
-
 #: widgets/vertical-slider-widget.php:413
-msgid "cart shadow"
-msgstr "سایه جعبه"
+msgid "card shadow"
+msgstr "سایه کارت"
 
 #: widgets/vertical-slider-widget.php:420
-msgid "cart padding"
-msgstr "فاصله داخلی جعبه"
+msgid "card padding"
+msgstr "فاصله داخلی کارت"
 
 #: widgets/vertical-slider-widget.php:432
 msgid "product image"
@@ -204,16 +350,20 @@ msgid "icons"
 msgstr "آیکون"
 
 #: widgets/vertical-slider-widget.php:458
-msgid "عرض کارت"
+msgid "card width"
 msgstr "عرض کارت"
 
 #: widgets/vertical-slider-widget.php:483
 msgid "icons color"
 msgstr "رنگ آیکون"
 
+#. Plugin Name of the plugin/theme
+msgid "custom elementor widgets"
+msgstr "ویجت های سفارشی المنتور"
+
 #. Description of the plugin/theme
-msgid "A slider that is displayed vertically and is suitable for mobile devices."
-msgstr "اسلایدری که به صورت عمودی نمایش داده می‌شود و برای دستگاه‌های تلفن همراه مناسب است."
+msgid "Custom plugins that we can add to our Elementor."
+msgstr "افزونه های سفارشی که میتونیم به المنتور خودمون اضافه کنیم."
 
 #. Author of the plugin/theme
 msgid "farzane nazmabadi"
@@ -222,3 +372,9 @@ msgstr "فرزانه نظم آبادی"
 #. Author URI of the plugin/theme
 msgid "https://farzanenazmabadi.ir/"
 msgstr "https://farzanenazmabadi.ir/"
+
+#~ msgid ""
+#~ "A slider that is displayed vertically and is suitable for mobile devices."
+#~ msgstr ""
+#~ "اسلایدری که به صورت عمودی نمایش داده می‌شود و برای دستگاه‌های تلفن همراه "
+#~ "مناسب است."

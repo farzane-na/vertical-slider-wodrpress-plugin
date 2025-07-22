@@ -1,12 +1,12 @@
 <?php
 /**
-* Plugin Name: vertical slider
-* Description: A slider that is displayed vertically and is suitable for mobile devices.
+* Plugin Name: custom elementor widgets
+* Description: Custom plugins that we can add to our Elementor.
 * Version: 1.0
 * Requires PHP:      7.4
 * Author: farzane nazmabadi
 * Author URI:        https://farzanenazmabadi.ir/
-* Text Domain:       vertical-slider
+* Text Domain:       farzane-widget
 * Domain Path:       /languages
 * Requires Plugins:  elementor
 */
@@ -14,11 +14,18 @@ if ( ! defined( 'ABSPATH' ) ) {
    exit;
 }
 // Register the widget.
-function register_vertical_slider_widget( $widgets_manager ) {
-   require_once __DIR__ . '/widgets/vertical-slider-widget.php';
-   $widgets_manager->register( new \Vertical_Slider_Widget() );
+add_action( 'elementor/init', 'init_custom_elementor_widgets' );
+
+function init_custom_elementor_widgets() {
+    require_once __DIR__ . '/widgets/vertical-slider-widget.php';
+    require_once __DIR__ . '/widgets/product-category-widget.php';
+
+    add_action( 'elementor/widgets/widgets_registered', 'register_custom_widget_elementor' );
 }
-add_action( 'elementor/widgets/register', 'register_vertical_slider_widget' );
+function register_custom_widget_elementor( $widgets_manager ) {
+   $widgets_manager->register( new \Vertical_Slider_Widget() );
+   $widgets_manager->register( new \Product_Category_Widget() );
+}
 
 function vertical_slider_enqueue_assets() {
    
@@ -37,13 +44,13 @@ function vertical_slider_enqueue_assets() {
         '1.0.0',
         true
     ); wp_register_style(
-        'vertical-slider-style',
+        'farzane-widget-style',
         plugin_dir_url(__FILE__) . 'asset/css/app.css',
         [],
         '1.0.0'
     );
     wp_register_script(
-        'vertical-slider-script',
+        'farzane-widget-script',
         plugin_dir_url(__FILE__) . 'asset/js/app.js',
         ['jquery'],
         '1.0.0',

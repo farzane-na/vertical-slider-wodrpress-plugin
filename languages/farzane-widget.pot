@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: vertical slider\n"
-"POT-Creation-Date: 2025-07-19 15:05+0330\n"
-"PO-Revision-Date: 2025-07-19 15:05+0330\n"
+"Project-Id-Version: custom elementor widget\n"
+"POT-Creation-Date: 2025-07-22 15:52+0330\n"
+"PO-Revision-Date: 2025-07-22 15:52+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Generator: Poedit 2.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: vertical-slider.php\n"
+"X-Poedit-WPHeader: custom-elementor-widget.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -21,7 +21,171 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#. Plugin Name of the plugin/theme
+#: widgets/product-category-widget.php:24
+msgid "Product Categories widget"
+msgstr ""
+
+#: widgets/product-category-widget.php:61
+msgid "Layout"
+msgstr ""
+
+#: widgets/product-category-widget.php:71
+msgid "Categories Count"
+msgstr ""
+
+#: widgets/product-category-widget.php:82
+#: widgets/vertical-slider-widget.php:191
+msgid "Query"
+msgstr ""
+
+#: widgets/product-category-widget.php:90
+msgid "Source"
+msgstr ""
+
+#: widgets/product-category-widget.php:93
+msgid "Show All"
+msgstr ""
+
+#: widgets/product-category-widget.php:94
+msgid "Manual Selection"
+msgstr ""
+
+#: widgets/product-category-widget.php:95
+msgid "By Parent"
+msgstr ""
+
+#: widgets/product-category-widget.php:96
+msgid "Current Subcategories"
+msgstr ""
+
+#: widgets/product-category-widget.php:112
+msgid "Categories"
+msgstr ""
+
+#: widgets/product-category-widget.php:124
+msgid "Only Top Level"
+msgstr ""
+
+#: widgets/product-category-widget.php:128
+msgid "Parent"
+msgstr ""
+
+#: widgets/product-category-widget.php:141
+msgid "Hide Empty"
+msgstr ""
+
+#: widgets/product-category-widget.php:152
+msgid "Order By"
+msgstr ""
+
+#: widgets/product-category-widget.php:156
+msgid "Name"
+msgstr ""
+
+#: widgets/product-category-widget.php:157
+msgid "Slug"
+msgstr ""
+
+#: widgets/product-category-widget.php:158
+msgid "Description"
+msgstr ""
+
+#: widgets/product-category-widget.php:159
+#: widgets/product-category-widget.php:349
+msgid "Count"
+msgstr ""
+
+#: widgets/product-category-widget.php:167
+msgid "Order"
+msgstr ""
+
+#: widgets/product-category-widget.php:171
+msgid "ASC"
+msgstr ""
+
+#: widgets/product-category-widget.php:172
+msgid "DESC"
+msgstr ""
+
+#: widgets/product-category-widget.php:182
+#: widgets/vertical-slider-widget.php:203
+msgid "Products"
+msgstr ""
+
+#: widgets/product-category-widget.php:192
+msgid ""
+"The style of this widget is often affected by your theme and plugins. If you "
+"experience any such issue, try to switch to a basic theme and deactivate "
+"related plugins."
+msgstr ""
+
+#: widgets/product-category-widget.php:208
+msgid "Columns Gap"
+msgstr ""
+
+#: widgets/product-category-widget.php:228
+msgid "Rows Gap"
+msgstr ""
+
+#: widgets/product-category-widget.php:248
+#: widgets/vertical-slider-widget.php:250
+#: widgets/vertical-slider-widget.php:301
+#: widgets/vertical-slider-widget.php:351
+msgid "Alignment"
+msgstr ""
+
+#: widgets/product-category-widget.php:252
+msgid "Left"
+msgstr ""
+
+#: widgets/product-category-widget.php:256
+#: widgets/vertical-slider-widget.php:258
+#: widgets/vertical-slider-widget.php:359
+msgid "Center"
+msgstr ""
+
+#: widgets/product-category-widget.php:260
+msgid "Right"
+msgstr ""
+
+#: widgets/product-category-widget.php:274
+msgid "Image"
+msgstr ""
+
+#: widgets/product-category-widget.php:291
+#: widgets/vertical-slider-widget.php:401
+msgid "Border Radius"
+msgstr ""
+
+#: widgets/product-category-widget.php:303
+msgid "Spacing"
+msgstr ""
+
+#: widgets/product-category-widget.php:315
+msgid "Title"
+msgstr ""
+
+#: widgets/product-category-widget.php:324
+#: widgets/product-category-widget.php:358
+msgid "Color"
+msgstr ""
+
+#: widgets/product-category-widget.php:381
+msgid "wrapper style"
+msgstr ""
+
+#: widgets/product-category-widget.php:388
+msgid "wrapper padding"
+msgstr ""
+
+#: widgets/product-category-widget.php:400
+msgid "wrapepr background"
+msgstr ""
+
+#: widgets/product-category-widget.php:409
+msgid "wrapper shadow"
+msgstr ""
+
 #: widgets/vertical-slider-widget.php:28
 msgid "vertical slider"
 msgstr ""
@@ -93,20 +257,12 @@ msgstr ""
 msgid "gap"
 msgstr ""
 
-#: widgets/vertical-slider-widget.php:191
-msgid "Query"
-msgstr ""
-
 #: widgets/vertical-slider-widget.php:198
 msgid "Post Type"
 msgstr ""
 
 #: widgets/vertical-slider-widget.php:202
 msgid "Posts"
-msgstr ""
-
-#: widgets/vertical-slider-widget.php:203
-msgid "Products"
 msgstr ""
 
 #: widgets/vertical-slider-widget.php:204
@@ -130,21 +286,10 @@ msgstr ""
 msgid "Typography"
 msgstr ""
 
-#: widgets/vertical-slider-widget.php:250
-#: widgets/vertical-slider-widget.php:301
-#: widgets/vertical-slider-widget.php:351
-msgid "Alignment"
-msgstr ""
-
 #: widgets/vertical-slider-widget.php:254
 #: widgets/vertical-slider-widget.php:305
 #: widgets/vertical-slider-widget.php:355
 msgid "right"
-msgstr ""
-
-#: widgets/vertical-slider-widget.php:258
-#: widgets/vertical-slider-widget.php:359
-msgid "Center"
 msgstr ""
 
 #: widgets/vertical-slider-widget.php:262
@@ -174,23 +319,19 @@ msgid "card style"
 msgstr ""
 
 #: widgets/vertical-slider-widget.php:385
-msgid "cart background"
+msgid "card background"
 msgstr ""
 
 #: widgets/vertical-slider-widget.php:393
 msgid "Border"
 msgstr ""
 
-#: widgets/vertical-slider-widget.php:401
-msgid "Border Radius"
-msgstr ""
-
 #: widgets/vertical-slider-widget.php:413
-msgid "cart shadow"
+msgid "card shadow"
 msgstr ""
 
 #: widgets/vertical-slider-widget.php:420
-msgid "cart padding"
+msgid "card padding"
 msgstr ""
 
 #: widgets/vertical-slider-widget.php:432
@@ -206,11 +347,15 @@ msgid "icons"
 msgstr ""
 
 #: widgets/vertical-slider-widget.php:458
-msgid "عرض کارت"
+msgid "card width"
 msgstr ""
 
 #: widgets/vertical-slider-widget.php:483
 msgid "icons color"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "custom elementor widget"
 msgstr ""
 
 #. Description of the plugin/theme

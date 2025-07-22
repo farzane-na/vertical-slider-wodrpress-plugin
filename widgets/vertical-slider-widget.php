@@ -25,7 +25,7 @@ class Vertical_slider_Widget extends \Elementor\Widget_Base {
       return 'vertical_slider';
   }
   public function get_title() {
-      return __( 'vertical slider', 'vertical-slider' );
+      return __( 'vertical slider', 'farzane-widget' );
   }
   public function get_icon() {
       return 'eicon-nested-carousel';
@@ -66,30 +66,30 @@ class Vertical_slider_Widget extends \Elementor\Widget_Base {
     $this->start_controls_section(
     'section_layout_controls',
     [
-        'label' => esc_html__( 'card layout', 'vertical-slider' ),
+        'label' => esc_html__( 'card layout', 'farzane-widget' ),
         'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
     ]
 );
 $this->add_control(
     'flex_direction',
     [
-        'label' => esc_html__( 'direction', 'vertical-slider' ),
+        'label' => esc_html__( 'direction', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::CHOOSE,
         'options' => [
             'row'=>[
-                'title'=> __('row','vertical-slider'),
+                'title'=> __('row','farzane-widget'),
                 'icon'=>'eicon-arrow-left'
             ],
             'row-reverse' => [
-                'title'=>__('row reverse','vertical-slider'),
+                'title'=>__('row reverse','farzane-widget'),
                 'icon'=>'eicon-arrow-right'
             ],
             'column' =>[
-                'title'=> __('column','vertical-slider'),
+                'title'=> __('column','farzane-widget'),
                 'icon'=>'eicon-arrow-down'
             ],
             'column-reverse' =>[
-                'title'=> __('column reverse','vertical-slider'),
+                'title'=> __('column reverse','farzane-widget'),
                 'icon'=>'eicon-arrow-up'
             ],
         ],
@@ -102,31 +102,31 @@ $this->add_control(
 $this->add_control(
     'justify_content',
     [
-        'label' => esc_html__( 'Justify Content', 'vertical-slider' ),
+        'label' => esc_html__( 'Justify Content', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::CHOOSE,
         'options' => [
             'flex-start' =>[
-                'title'=> __('flex start','vertical-slider'),
+                'title'=> __('flex start','farzane-widget'),
                 'icon'=>'eicon-justify-end-h'
             ],
             'center' =>[
-                'title'=> __('center','vertical-slider'),
+                'title'=> __('center','farzane-widget'),
                 'icon'=>'eicon-justify-center-h'
             ],
             'flex-end' => [
-                'title'=>__('flex end','vertical-slider'),
+                'title'=>__('flex end','farzane-widget'),
                 'icon'=>'eicon-justify-start-h'
             ],
             'space-between' =>[
-                'title'=> __('space between','vertical-slider'),
+                'title'=> __('space between','farzane-widget'),
                 'icon'=>'eicon-justify-space-between-h'
             ],
             'space-around' => [
-                'title'=>__('space around','vertical-slider'),
+                'title'=>__('space around','farzane-widget'),
                 'icon'=>'eicon-justify-space-around-h'
             ],
             'space-evenly' => [
-                'title'=>__('space evenly','vertical-slider'),
+                'title'=>__('space evenly','farzane-widget'),
                 'icon'=>'eicon-justify-space-evenly-h'
             ],
         ],
@@ -139,24 +139,24 @@ $this->add_control(
 $this->add_control(
     'align_items',
     [
-        'label' => esc_html__( 'Align Items', 'vertical-slider' ),
+        'label' => esc_html__( 'Align Items', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::CHOOSE,
         'default' => 'stretch',
         'options' => [
             'flex-start' =>[
-                'title'=>__( 'flex start','vertical-slider'),
+                'title'=>__( 'flex start','farzane-widget'),
                 'icon'=>'eicon-align-start-v'
             ],
             'center' => [
-                'title'=>__('center','vertical-slider'),
+                'title'=>__('center','farzane-widget'),
                 'icon'=>'eicon-align-center-v'
             ],
             'flex-end' =>[
-                'title'=> __('flex end','vertical-slider'),
+                'title'=> __('flex end','farzane-widget'),
                 'icon'=>'eicon-align-end-v'
             ],
             'stretch' => [
-                'title'=>__('stretch','vertical-slider'),
+                'title'=>__('stretch','farzane-widget'),
                 'icon'=>'eicon-align-stretch-v'
             ]
         ],
@@ -168,7 +168,7 @@ $this->add_control(
 $this->add_responsive_control(
     'flex_gap',
     [
-        'label' => esc_html__( 'gap', 'vertical-slider' ),
+        'label' => esc_html__( 'gap', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::SLIDER,
         'size_units' => [ 'px', 'em', '%' ],
         'range' => [
@@ -188,27 +188,27 @@ $this->end_controls_section();
 $this->start_controls_section(
     'section_query',
     [
-        'label' => __( 'Query', 'vertical-slider' ),
+        'label' => __( 'Query', 'farzane-widget' ),
         'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
     ]
 );
 $this->add_control(
     'post_type',
     [
-        'label' => __( 'Post Type', 'vertical-slider' ),
+        'label' => __( 'Post Type', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::SELECT,
         'default' => 'product',
         'options' => [
-            'post'    => __( 'Posts', 'vertical-slider' ),
-            'product' => __( 'Products', 'vertical-slider' ),
-            'page'    => __( 'Pages', 'vertical-slider' ),
+            'post'    => __( 'Posts', 'farzane-widget' ),
+            'product' => __( 'Products', 'farzane-widget' ),
+            'page'    => __( 'Pages', 'farzane-widget' ),
         ]
     ]
 );
 $this->add_control(
     'select_terms',
     [
-        'label' => __( 'Filter by Term', 'vertical-slider' ),
+        'label' => __( 'Filter by Term', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::SELECT2,
         'multiple' => true,
         'options' => $this->get_combined_product_terms_options(),
@@ -221,14 +221,14 @@ $this->end_controls_section(); // ⬅️ پایان بخش Query
 $this->start_controls_section(
     'section_card_title_style',
     [
-        'label' => __( 'content style', 'vertical-slider' ),
+        'label' => __( 'content style', 'farzane-widget' ),
         'tab' => \Elementor\Controls_Manager::TAB_STYLE,
     ]
 );
 $this->add_control(
     'card_title_color',
     [
-        'label' => __( 'Title Color', 'vertical-slider' ),
+        'label' => __( 'Title Color', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::COLOR,
         'default' => '#333333',
         'selectors' => [
@@ -240,26 +240,26 @@ $this->add_group_control(
     \Elementor\Group_Control_Typography::get_type(),
     [
         'name' => 'card_title_typography',
-        'label' => __( 'Typography', 'vertical-slider' ),
+        'label' => __( 'Typography', 'farzane-widget' ),
         'selector' => '{{WRAPPER}} .product-title',
     ]
 );
 $this->add_responsive_control(
     'card_title_alignment',
     [
-        'label' => __( 'Alignment', 'vertical-slider' ),
+        'label' => __( 'Alignment', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::CHOOSE,
         'options' => [
             'right' => [
-                'title' => __( 'right', 'vertical-slider' ),
+                'title' => __( 'right', 'farzane-widget' ),
                 'icon' => 'eicon-text-align-right',
             ],
             'center' => [
-                'title' => __( 'Center', 'vertical-slider' ),
+                'title' => __( 'Center', 'farzane-widget' ),
                 'icon' => 'eicon-text-align-center',
             ],
             'left'=>[
-                'title'=>__('left','vertical-slider'),
+                'title'=>__('left','farzane-widget'),
                 'icon'=>'eicon-text-align-left'
             ],
         ],
@@ -279,7 +279,7 @@ $this->add_control(
 $this->add_control(
     'card_caption_color',
     [
-        'label'=> __('caption color','vertical-slider'),
+        'label'=> __('caption color','farzane-widget'),
         'type'=> \Elementor\Controls_Manager::COLOR,
         'default'=>"#333333",
         'selector'=>[
@@ -291,26 +291,26 @@ $this->add_group_control(
     \Elementor\Group_Control_Typography::get_type(),
     [
         'name'=>'card_caption_typography',
-        'label'=>__('Typography', 'vertical-slider' ),
+        'label'=>__('Typography', 'farzane-widget' ),
         'selector'=>'{{WRAPPER}} .product-caption'
     ]
 );
 $this->add_responsive_control(
-    'cart_caption_alignment',
+    'card_caption_alignment',
     [
-        'label'=>__('Alignment', 'vertical-slider'),
+        'label'=>__('Alignment', 'farzane-widget'),
         'type'=> \Elementor\Controls_Manager::CHOOSE,
         'options'=>[
             'right'=>[
-                'title'=>__('right','vertical-slider'),
+                'title'=>__('right','farzane-widget'),
                 'icon'=>'eicon-text-align-right'
             ],
             'center'=>[
-                'title'=>__('cenetr','vertical-slider'),
+                'title'=>__('cenetr','farzane-widget'),
                 'icon'=>'eicon-text-align-center'
             ],
             'left'=>[
-                'title'=>__('left','vertical-slider'),
+                'title'=>__('left','farzane-widget'),
                 'icon'=>'eicon-text-align-left'
             ],
         ],
@@ -329,7 +329,7 @@ $this->add_control(
 $this->add_control(
     'card_price_color',
     [
-        'label'=>__('price color','vertical-slider'),
+        'label'=>__('price color','farzane-widget'),
         'type'=>\Elementor\Controls_Manager::COLOR,
         'default'=>"#333333",
         'selector'=>[
@@ -341,26 +341,26 @@ $this->add_group_control(
     \Elementor\Group_Control_Typography::get_type(),
     [
         'name'=>'card_price_typography',
-        'label'=>__('typography','vertical-slider'),
+        'label'=>__('typography','farzane-widget'),
         'selector'=> '{{WRAPPER}} .product-price'
     ]
 );
 $this->add_responsive_control(
     'card_price_alignment',
     [
-        'label'=>__('Alignment', 'vertical-slider' ),
+        'label'=>__('Alignment', 'farzane-widget' ),
         'type'=>\Elementor\Controls_Manager::CHOOSE,
         'options'=>[
              'right' => [
-                'title' => __( 'right', 'vertical-slider' ),
+                'title' => __( 'right', 'farzane-widget' ),
                 'icon' => 'eicon-text-align-right',
             ],
             'center' => [
-                'title' => __( 'Center', 'vertical-slider' ),
+                'title' => __( 'Center', 'farzane-widget' ),
                 'icon' => 'eicon-text-align-center',
             ],
             'left'=>[
-                'title'=>__('left','vertical-slider'),
+                'title'=>__('left','farzane-widget'),
                 'icon'=>'eicon-text-align-left'
             ],
         ],
@@ -374,7 +374,7 @@ $this->end_controls_section();
 $this->start_controls_section(
     'section_card_style',
     [
-        'label'=>__('card style','vertical-slider'),
+        'label'=>__('card style','farzane-widget'),
         'tab'=>\Elementor\Controls_Manager::TAB_STYLE,
     ]
 );
@@ -382,7 +382,7 @@ $this->add_group_control(
     \Elementor\Group_Control_Background::get_type(),
     [
         'name' => 'card_background',
-        'label' => __('cart background','vertical-slider'),
+        'label' => __('card background','farzane-widget'),
         'types' => [ 'classic', 'gradient' ],
         'selector' => '{{WRAPPER}} .product-content',
     ]
@@ -390,7 +390,7 @@ $this->add_group_control(
 $this->add_group_control(
     \Elementor\Group_Control_Border::get_type(),
     [
-        'label' => esc_html__( 'Border', 'vertical-slider' ),
+        'label' => esc_html__( 'Border', 'farzane-widget' ),
         'name' => 'card_border',
         'selector' => '{{WRAPPER}} .product-content',
     ]
@@ -410,14 +410,14 @@ $this->add_group_control(
     \Elementor\Group_Control_Box_Shadow::get_type(),
     [
         'name' => 'card_shadow',
-        'label' => __('cart shadow','vertical-slider'),
+        'label' => __('card shadow','farzane-widget'),
         'selector' => '{{WRAPPER}} .product-content',
     ]
 );
 $this->add_responsive_control(
-    'cart_padding',
+    'card_padding',
     [
-        'label' => esc_html__( 'cart padding', 'vertical-slider' ),
+        'label' => esc_html__( 'card padding', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => [ 'px', 'em', '%' ],
         'selectors' => [
@@ -436,7 +436,7 @@ $this->start_controls_section(
 $this->add_control(
     'border_radius_image',
     [
-        'label' => esc_html__( 'border radius image', 'vertical-slider' ),
+        'label' => esc_html__( 'border radius image', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => [ 'px', '%' ],
         'selectors' => [
@@ -448,14 +448,14 @@ $this->end_controls_section();
 $this->start_controls_section(
     'section_icon',
     [
-        'label'=>__('icons','vertical-slider'),
+        'label'=>__('icons','farzane-widget'),
         'tab'=>\Elementor\Controls_Manager::TAB_STYLE
     ]
 );
 $this->add_responsive_control(
     'icon_width',
     [
-        'label' => esc_html__( 'card width', 'text-domain' ),
+        'label' => esc_html__( 'icon width', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::SLIDER,
         'size_units' => [ 'px', '%', 'vw' ],
         'range' => [
@@ -480,7 +480,7 @@ $this->add_responsive_control(
 $this->add_control(
     'slider_icon_color',
     [
-        'label' => __( 'icons color', 'vertical-slider' ),
+        'label' => __( 'icons color', 'farzane-widget' ),
         'type' => \Elementor\Controls_Manager::COLOR,
         'default' => '#333333',
         'selectors' => [
@@ -494,8 +494,8 @@ $this->end_controls_section();
   protected function render() {
       wp_enqueue_script('swiper-bundle-script');
       wp_enqueue_style('swiper-bundle-style');
-    wp_enqueue_style('vertical-slider-style');
-    wp_enqueue_script('vertical-slider-script');
+    wp_enqueue_style('farzane-widget-style');
+    wp_enqueue_script('farzane-widget-script');
     $settings = $this->get_settings_for_display();
     $post_type = $settings['post_type'] ?? 'post';
     $category = $settings['category'] ?? '';

@@ -66,7 +66,8 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
     public function get_style_depends(): array {
         return [ 'widget-woocommerce-products', 'widget-woocommerce-categories' ];
     }
-    private function get_product_categories() {
+//    get taxonomy
+    private function get_product_categories_options() {
         $terms = get_terms([
             'taxonomy' => 'product_cat',
             'hide_empty' => false,
@@ -74,15 +75,12 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
 
         $options = [];
 
-        if (!is_wp_error($terms)) {
-            foreach ($terms as $term) {
-                $options[$term->term_id] = $term->name;
-            }
+        foreach ( $terms as $term ) {
+            $options[ $term->term_id ] = $term->name;
         }
 
         return $options;
     }
-
 
     protected function register_controls() {
         $this->start_controls_section(
@@ -92,6 +90,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
+
 
 //		$this->add_columns_responsive_control();
 
@@ -150,7 +149,17 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+        $this->add_control(
+            'product_exclude_categories',
+            [
+                'label'       => __( 'Exclude Category', 'farzane-widget' ),
+                'type'        => Controls_Manager::SELECT2,
+                'multiple'    => true,
+                'options'     => $this->get_product_categories_options(),
+                'default'     => [],
+                'label_block' => true,
+            ]
+        );
         $parent_options = [ '0' => esc_html__( 'Only Top Level', 'farzane-widget' ) ] + $options;
         $this->add_control(
             'parent',
@@ -203,17 +212,6 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-        $this->add_control(
-            'excluded_categories',
-            [
-                'label' => esc_html__('Execute Category', 'textdomain'),
-                'type' => \Elementor\Controls_Manager::SELECT2,
-                'multiple' => true,
-                'options' => $this->get_product_categories(),
-                'label_block' => true,
-            ]
-        );
-
 
         $this->end_controls_section();
 
@@ -258,7 +256,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.elementor-wc-products  ul.products' => 'grid-column-gap: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}} .total-product-category-container' => 'grid-column-gap: {{SIZE}}{{UNIT}}',
                 ],
             ]
         );
@@ -278,7 +276,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.elementor-wc-products  ul.products' => 'grid-row-gap: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}} .total-product-category-container' => 'grid-row-gap: {{SIZE}}{{UNIT}}',
                 ],
             ]
         );
@@ -322,7 +320,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
             Group_Control_Border::get_type(),
             [
                 'name'     => 'image_border',
-                'selector' => '{{WRAPPER}} a > img',
+                'selector' => '{{WRAPPER}} .product-category-img',
             ]
         );
 
@@ -333,7 +331,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
                 'selectors'  => [
-                    '{{WRAPPER}} a > img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                    '{{WRAPPER}} .product-category-img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
                 ],
             ]
         );
@@ -345,7 +343,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 'type'       => Controls_Manager::SLIDER,
                 'size_units' => [ 'px', 'em', 'rem', 'custom' ],
                 'selectors'  => [
-                    '{{WRAPPER}} a > img' => 'margin-bottom: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}} .product-category-img' => 'margin-bottom: {{SIZE}}{{UNIT}}',
                 ],
             ]
         );
@@ -368,7 +366,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                     'default' => Global_Colors::COLOR_PRIMARY,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .woocommerce .woocommerce-loop-category__title' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .product-category-title' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -380,7 +378,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 'global'    => [
                     'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
                 ],
-                'selector' => '{{WRAPPER}} .woocommerce .woocommerce-loop-category__title',
+                'selector' => '{{WRAPPER}} .product-category-title',
             ]
         );
 
@@ -430,7 +428,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
-                    '{{WRAPPER}} .wrapper-category-box' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .category-wrapper' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -440,7 +438,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 'name' => 'wrapper_background',
                 'label' => __('wrapepr background','farzane-widget'),
                 'types' => [ 'classic', 'gradient' ],
-                'selector' => '{{WRAPPER}} .wrapper-category-box',
+                'selector' => '{{WRAPPER}} .category-wrapper',
             ]
         );
         $this->add_group_control(
@@ -448,7 +446,7 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
             [
                 'name' => 'wrapepr_shadow',
                 'label' => __('wrapper shadow','farzane-widget'),
-                'selector' => '{{WRAPPER}} .wrapper-category-box',
+                'selector' => '{{WRAPPER}} .category-wrapper',
             ]
         );
         $this->add_responsive_control(
@@ -472,58 +470,59 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .wrapper-category-box' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .category-wrapper' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
         $this->end_controls_section();
     }
-
-    private function get_shortcode() {
-        $settings = $this->get_settings();
-
-        $attributes = [
-            'number' => $settings['number'],
-            'columns' => $settings['columns'],
-            'hide_empty' => ( 'yes' === $settings['hide_empty'] ) ? 1 : 0,
-            'orderby' => $settings['orderby'],
-            'order' => $settings['order'],
-        ];
-
-        if ( 'by_id' === $settings['source'] ) {
-            $attributes['ids'] = implode( ',', $settings['categories'] );
-        } elseif ( 'by_parent' === $settings['source'] ) {
-            $attributes['parent'] = $settings['parent'];
-        } elseif ( 'current_subcategories' === $settings['source'] ) {
-            $attributes['parent'] = get_queried_object_id();
-        }
-        if ( ! empty( $settings['product_categories'] ) ) {
-            $attributes['ids'] = implode( ',', $settings['product_categories'] );
-        } elseif ( ! empty( $settings['excluded_categories'] ) ) {
-            $attributes['exclude'] = implode( ',', $settings['excluded_categories'] );
-        }
-
-        $this->add_render_attribute( 'shortcode', $attributes );
-
-        $shortcode = sprintf( '[product_categories %s]', $this->get_render_attribute_string( 'shortcode' ) );
-
-        return $shortcode;
-    }
-
+    ///////////
     public function render() {
-        $product_categories_html = do_shortcode( $this->get_shortcode() );
-
-        if ( $product_categories_html ) {
-            $product_categories_html = str_replace( '<ul class="products', '<ul class="products elementor-grid', $product_categories_html );
-
-            // PHPCS - Doesn't need to be escaped since it's a WooCommerce template, and 3rd party plugins might hook into it.
-            echo $product_categories_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        $settings = $this->get_settings_for_display();
+        $exclude_categories = $settings['product_exclude_categories'] ?? [];
+        $args = [
+            'taxonomy'   => 'product_cat',
+            'hide_empty' => ( 'yes' === $settings['hide_empty'] ) ? true : false,
+            'orderby'    => $settings['orderby'],
+            'order'      => $settings['order'],
+        ];
+        if ( 'by_id' === $settings['source'] && ! empty( $settings['categories'] ) ) {
+            $args['include'] = array_map( 'intval', $settings['categories'] );
+        } elseif ( 'by_parent' === $settings['source'] ) {
+            $args['parent'] = intval( $settings['parent'] );
+        } elseif ( 'current_subcategories' === $settings['source'] ) {
+            $args['parent'] = get_queried_object_id();
         }
-    }
+        $categories = get_terms( $args );
 
-    public function render_plain_content() {
-        echo wp_kses_post( $this->get_shortcode() );
+        if ( is_wp_error( $categories ) || empty( $categories ) ) {
+            echo '<p>' . __( 'No results found. ', 'farzane-widget' ) . '</p>';
+            return;
+        }
+        echo '<div class="total-product-category-container">';
+        foreach ( $categories as $category ) {
+            if ( in_array( strval( $category->term_id ), $exclude_categories, true ) ) {
+                continue;
+            }
+
+            $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
+            $image_url = $thumbnail_id ? wp_get_attachment_url( $thumbnail_id ) : wc_placeholder_img_src();
+            $link = get_term_link( $category );
+            $title = esc_html( $category->name );
+            echo '
+            <div class="product-category-item">
+                <div class="category-wrapper">
+                     <a class="product-category-link" href="' . esc_url( $link ) . '">
+                        <img class="product-category-img" src="' . esc_url( $image_url ) . '" alt="' . $title . '" />
+                         <h4 class="product-category-title">' . $title . '</h4>
+                     </a>
+                </div>
+            </div>';
+        }
+
+        echo '</div>';
     }
+    ////////
 
     public function get_group_name() {
         return 'woocommerce';

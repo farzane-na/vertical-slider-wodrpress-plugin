@@ -20,6 +20,7 @@ use Elementor\Base\Data_Control;
 use Elementor\Frontend;
 use Elementor\Editor;
 use Elementor\Element_Bas;
+use Elementor\Group_Control_Css_Filter;
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
@@ -241,71 +242,8 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
-            'column_gap',
-            [
-                'label'     => esc_html__( 'Columns Gap', 'farzane-widget' ),
-                'type'      => Controls_Manager::SLIDER,
-                'size_units' => [ 'px', 'em', 'rem', 'custom' ],
-                'default'   => [
-                    'size' => 20,
-                ],
-                'range'     => [
-                    'px' => [
-                        'max' => 100,
-                    ],
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .total-product-category-container' => 'grid-column-gap: {{SIZE}}{{UNIT}}',
-                ],
-            ]
-        );
 
-        $this->add_control(
-            'row_gap',
-            [
-                'label'     => esc_html__( 'Rows Gap', 'farzane-widget' ),
-                'type'      => Controls_Manager::SLIDER,
-                'size_units' => [ 'px', 'em', 'rem', 'custom' ],
-                'default'   => [
-                    'size' => 40,
-                ],
-                'range'     => [
-                    'px' => [
-                        'max' => 100,
-                    ],
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .total-product-category-container' => 'grid-row-gap: {{SIZE}}{{UNIT}}',
-                ],
-            ]
-        );
 
-        $this->add_responsive_control(
-            'align',
-            [
-                'label'     => esc_html__( 'Alignment', 'farzane-widget' ),
-                'type'      => Controls_Manager::CHOOSE,
-                'options'   => [
-                    'left'   => [
-                        'title' => esc_html__( 'Left', 'farzane-widget' ),
-                        'icon'  => 'eicon-text-align-left',
-                    ],
-                    'center' => [
-                        'title' => esc_html__( 'Center', 'farzane-widget' ),
-                        'icon'  => 'eicon-text-align-center',
-                    ],
-                    'right'  => [
-                        'title' => esc_html__( 'Right', 'farzane-widget' ),
-                        'icon'  => 'eicon-text-align-right',
-                    ],
-                ],
-                'prefix_class' => 'farzane-widgetduct-loop-item--align-',
-                'selectors' => [
-                    '{{WRAPPER}} .product' => 'text-align: {{VALUE}}',
-                ],
-            ]
-        );
 
         $this->add_control(
             'heading_image_style',
@@ -347,6 +285,14 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
+        $this->add_group_control(
+            Group_Control_Css_Filter::get_type(),
+            [
+                'name'     => 'image_css_filters',
+                'label'    => __( 'CSS Filters', 'farzane-widget' ),
+                'selector' => '{{WRAPPER}} .product-category-img',
+            ]
+        );
 
         $this->add_control(
             'heading_title_style',
@@ -381,35 +327,40 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 'selector' => '{{WRAPPER}} .product-category-title',
             ]
         );
-
-        $this->add_control(
-            'heading_count_style',
+        $this->add_responsive_control(
+            'title_spacing',
             [
-                'label'     => esc_html__( 'Count', 'farzane-widget' ),
-                'type'      => Controls_Manager::HEADING,
-                'separator' => 'before',
-            ]
-        );
-
-        $this->add_control(
-            'count_color',
-            [
-                'label'     => esc_html__( 'Color', 'farzane-widget' ),
-                'type'      => Controls_Manager::COLOR,
+                'label'      => esc_html__( 'Title Spacing', 'farzane-widget' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
-                    '{{WRAPPER}} .woocommerce-loop-category__title .count' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .product-category-title h4' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
+        $this->add_responsive_control(
+            'align',
             [
-                'name'     => 'count_typography',
-                'global'    => [
-                    'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+                'label'     => esc_html__( 'Alignment', 'farzane-widget' ),
+                'type'      => Controls_Manager::CHOOSE,
+                'options'   => [
+                    'left'   => [
+                        'title' => esc_html__( 'Left', 'farzane-widget' ),
+                        'icon'  => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__( 'Center', 'farzane-widget' ),
+                        'icon'  => 'eicon-text-align-center',
+                    ],
+                    'right'  => [
+                        'title' => esc_html__( 'Right', 'farzane-widget' ),
+                        'icon'  => 'eicon-text-align-right',
+                    ],
                 ],
-                'selector' => '{{WRAPPER}} .woocommerce-loop-category__title .count',
+                'prefix_class' => 'farzane-widgetduct-loop-item--align-',
+                'selectors' => [
+                    '{{WRAPPER}} .product-category-title' => 'text-align: {{VALUE}}',
+                ],
             ]
         );
 

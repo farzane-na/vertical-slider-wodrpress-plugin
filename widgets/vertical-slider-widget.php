@@ -184,40 +184,69 @@ $this->add_responsive_control(
 );
 
 $this->end_controls_section();
-
 $this->start_controls_section(
-    'section_query',
+        'category_name_section',
     [
-        'label' => __( 'Query', 'farzane-widget' ),
-        'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            'label'=>__('Category Name','farzane-widget'),
+            'tab'=>\Elementor\Controls_Manager::TAB_STYLE,
     ]
 );
 $this->add_control(
-    'post_type',
+    'category_title_color',
     [
-        'label' => __( 'Post Type', 'farzane-widget' ),
-        'type' => \Elementor\Controls_Manager::SELECT,
-        'default' => 'product',
-        'options' => [
-            'post'    => __( 'Posts', 'farzane-widget' ),
-            'product' => __( 'Products', 'farzane-widget' ),
-            'page'    => __( 'Pages', 'farzane-widget' ),
-        ]
+        'label' => __( 'Category Name Color', 'farzane-widget' ),
+        'type' => \Elementor\Controls_Manager::COLOR,
+        'default' => '#333333',
+        'selectors' => [
+            '{{WRAPPER}} .product-category-name' => 'color: {{VALUE}};',
+        ],
     ]
 );
-$this->add_control(
-    'select_terms',
+$this->add_group_control(
+        \Elementor\Group_Control_Typography::get_type(),
     [
-        'label' => __( 'Filter by Term', 'farzane-widget' ),
-        'type' => \Elementor\Controls_Manager::SELECT2,
-        'multiple' => true,
-        'options' => $this->get_combined_product_terms_options(),
-        'condition' => [
-            'post_type' => 'product'
-        ]
+        'name' => 'product_category_name_typography',
+        'label' => __( 'Typography', 'farzane-widget' ),
+        'selector' => '{{WRAPPER}} .product-category-name',
     ]
-);
-$this->end_controls_section(); // ⬅️ پایان بخش Query
+      );
+      $this->add_responsive_control(
+          'product_category_name_alignment',
+          [
+              'label' => __( 'Alignment', 'farzane-widget' ),
+              'type' => \Elementor\Controls_Manager::CHOOSE,
+              'options' => [
+                  'right' => [
+                      'title' => __( 'right', 'farzane-widget' ),
+                      'icon' => 'eicon-text-align-right',
+                  ],
+                  'center' => [
+                      'title' => __( 'Center', 'farzane-widget' ),
+                      'icon' => 'eicon-text-align-center',
+                  ],
+                  'left'=>[
+                      'title'=>__('left','farzane-widget'),
+                      'icon'=>'eicon-text-align-left'
+                  ],
+              ],
+              'default' => 'right',
+              'selectors' => [
+                  '{{WRAPPER}} .product-category-name' => 'text-align: {{VALUE}};',
+              ],
+          ]
+      );
+      $this->add_responsive_control(
+          'product_category_name_spacing',
+          [
+              'label'      => esc_html__( 'Product Category Name Spacing', 'farzane-widget' ),
+              'type' => \Elementor\Controls_Manager::DIMENSIONS,
+              'size_units' => [ 'px', 'em', '%' ],
+              'selectors' => [
+                  '{{WRAPPER}} .product-category-name' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+              ],
+          ]
+      );
+$this->end_controls_section();
 $this->start_controls_section(
     'section_card_title_style',
     [
@@ -313,6 +342,10 @@ $this->add_responsive_control(
                 'title'=>__('left','farzane-widget'),
                 'icon'=>'eicon-text-align-left'
             ],
+            'justify'=>[
+                'title'=>__('justify','farzane-widget'),
+                'icon'=>'eicon-text-align-justify'
+            ],
         ],
         'default' => 'right',
         'selectors' => [
@@ -378,6 +411,31 @@ $this->start_controls_section(
         'tab'=>\Elementor\Controls_Manager::TAB_STYLE,
     ]
 );
+      $this->add_responsive_control(
+          'wrapper_width',
+          [
+              'label' => esc_html__( 'wrapper width', 'farzane-widget' ),
+              'type' => \Elementor\Controls_Manager::SLIDER,
+              'size_units' => [ 'px', '%', 'vw' ],
+              'range' => [
+                  'px' => [
+                      'min' => 0,
+                      'max' => 100,
+                  ],
+                  '%' => [
+                      'min' => 0,
+                      'max' => 100,
+                  ],
+                  'vw' => [
+                      'min' => 0,
+                      'max' => 100,
+                  ],
+              ],
+              'selectors' => [
+                  '{{WRAPPER}} .product-content' => 'width: {{SIZE}}{{UNIT}};',
+              ],
+          ]
+      );
 $this->add_group_control(
     \Elementor\Group_Control_Background::get_type(),
     [
@@ -406,14 +464,6 @@ $this->add_responsive_control(
         ],
     ]
 );
-$this->add_group_control(
-    \Elementor\Group_Control_Box_Shadow::get_type(),
-    [
-        'name' => 'card_shadow',
-        'label' => __('card shadow','farzane-widget'),
-        'selector' => '{{WRAPPER}} .product-content',
-    ]
-);
 $this->add_responsive_control(
     'card_padding',
     [
@@ -425,6 +475,14 @@ $this->add_responsive_control(
         ],
     ]
 );
+      $this->add_group_control(
+          \Elementor\Group_Control_Box_Shadow::get_type(),
+          [
+              'name' => 'card_shadow',
+              'label' => __('card shadow','farzane-widget'),
+              'selector' => '{{WRAPPER}} .product-content',
+          ]
+      );
 $this->end_controls_section();
 $this->start_controls_section(
     'section_card_image',
@@ -491,66 +549,57 @@ $this->add_control(
 
 $this->end_controls_section();
   }
-  protected function render() {
-      wp_enqueue_script('swiper-bundle-script');
-      wp_enqueue_style('swiper-bundle-style');
-    wp_enqueue_style('farzane-widget-style');
-    wp_enqueue_script('farzane-widget-script');
-    $settings = $this->get_settings_for_display();
-    $post_type = $settings['post_type'] ?? 'post';
-    $category = $settings['category'] ?? '';
-    $args = [
-        'post_type' => $post_type,
-        'posts_per_page' => -1,
-    ];
-    if (!empty($category)) {
-        $args['tax_query'] = [
-            [
-                'taxonomy' => 'category',
-                'field'    => 'term_id',
-                'terms'    => $category,
-            ],
+    protected function render() {
+        wp_enqueue_script('swiper-bundle-script');
+        wp_enqueue_style('swiper-bundle-style');
+        wp_enqueue_style('farzane-widget-style');
+        wp_enqueue_script('farzane-widget-script');
+
+        $args = [
+            'posts_per_page' => -1,
         ];
-    }
-    $query = new \WP_Query($args);
-    // var_dump($query);
-    if ($query->have_posts()) : ?>
-        <div class="swiper cafeSwiper">
-            <div class="swiper-wrapper">
-                <?php while ($query->have_posts()) : $query->the_post(); ?>
-                    <div class="swiper-slide">
-                        <div class="product-content">
-                            <div class="product-image-wrapper">
-                                <img class="product-image" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>">
-                            </div>
-                            <h2 class="product-title">
-                                <?php
-                                 the_title(); 
-                                 ?>
-                            </h2>
-                            <div class="product-caption"><?php the_content(); ?></div>
-                            <div class="product-price">
-                                <p>
-                                    <?php
-                                    $price = get_post_meta(get_the_ID(), '_regular_price', true);
-                                    echo $price ? esc_html($price) . ' تومان' : '—';
-                                    ?>
-                                </p>
+        $queried_object = get_queried_object();
+        if (is_tax('product_cat') && isset($queried_object->term_id)) {
+            $args['tax_query'] = [
+                [
+                    'taxonomy' => 'product_cat',
+                    'field'    => 'term_id',
+                    'terms'    => $queried_object->term_id,
+                ]
+            ];
+        }
+
+        $query = new \WP_Query($args);
+
+        if ($query->have_posts()) : ?>
+            <h2 class="product-category-name"><?php echo $queried_object->name ;  ?></h2>
+            <div class="swiper cafeSwiper">
+                <div class="swiper-wrapper">
+                    <?php while ($query->have_posts()) : $query->the_post(); ?>
+                        <div class="swiper-slide">
+                            <div class="product-content">
+                                <div class="product-image-wrapper">
+                                    <img class="product-image" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>">
+                                </div>
+                                <h3 class="product-title"><?php the_title(); ?></h3>
+                                <div class="product-caption"><?php the_content(); ?></div>
+                                <div class="product-price">
+                                    <p>
+                                        <?php
+                                        $price = get_post_meta(get_the_ID(), '_regular_price', true);
+                                        echo $price ? esc_html($price) . ' تومان' : '—';
+                                        ?>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <?php endwhile; ?>
+                    <?php endwhile; ?>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
-                <svg class="swiper-button-icon swiper-button-next" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.9201 8.9502L13.4001 15.4702C12.6301 16.2402 11.3701 16.2402 10.6001 15.4702L4.08008 8.9502" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <svg class="swiper-button-icon swiper-button-prev" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.9201 15.0501L13.4001 8.53014C12.6301 7.76014 11.3701 7.76014 10.6001 8.53014L4.08008 15.0501" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-        </div>
-    <?php
-    endif;
-    wp_reset_postdata();
-  }
-}
+        <?php
+        endif;
+        wp_reset_postdata();
+    }
+
+    }

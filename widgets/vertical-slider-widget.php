@@ -17,6 +17,7 @@ use Elementor\Plugin;
 use Elementor\Frontend;
 use Elementor\Editor;
 use Elementor\Element_Bas;
+use Elementor\Group_Control_Css_Filter;
 if ( ! defined( 'ABSPATH' ) ) {
   exit; 
 }
@@ -353,7 +354,50 @@ $this->add_responsive_control(
         ],
     ]
 );
-$this->add_control(
+      $this->add_responsive_control(
+          'caption_height',
+          [
+              'label' => esc_html__( 'wrapper height', 'farzane-widget' ),
+              'type' => \Elementor\Controls_Manager::SLIDER,
+              'size_units' => [ 'px', '%', 'vw' ],
+              'range' => [
+                  'px' => [
+                      'min' => 0,
+                      'max' => 300,
+                  ],
+                  '%' => [
+                      'min' => 0,
+                      'max' => 100,
+                  ],
+                  'vw' => [
+                      'min' => 0,
+                      'max' => 100,
+                  ],
+              ],
+              'selectors' => [
+                  '{{WRAPPER}} .product-caption' => 'height: {{SIZE}}{{UNIT}};',
+              ],
+          ]
+      );
+      $this->add_responsive_control(
+          'caption_line_clamp',
+          [
+              'label' => esc_html__( 'Line Clamp', 'farzane-widget' ),
+              'type' => \Elementor\Controls_Manager::SLIDER,
+              'size_units' => [],
+              'range' => [
+                  'px' => [
+                      'min' => 1,
+                      'max' => 10,
+                  ],
+              ],
+              'selectors' => [
+                  '{{WRAPPER}} .product-caption' => '-webkit-line-clamp: {{SIZE}};',
+              ],
+          ]
+      );
+
+      $this->add_control(
     'card_caption_divider',
     [
         'type'=>\Elementor\Controls_Manager::DIVIDER,
@@ -502,6 +546,14 @@ $this->add_control(
         ],
     ]
 );
+      $this->add_group_control(
+          Group_Control_Css_Filter::get_type(),
+          [
+              'name'     => 'image_css_filters',
+              'label'    => __( 'CSS Filters', 'farzane-widget' ),
+              'selector' => '{{WRAPPER}} .product-image',
+          ]
+      );
 $this->end_controls_section();
 $this->start_controls_section(
     'section_icon',
@@ -578,18 +630,22 @@ $this->end_controls_section();
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
                         <div class="swiper-slide">
                             <div class="product-content">
-                                <div class="product-image-wrapper">
-                                    <img class="product-image" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>">
+                                <div class="detail-wrapper">
+                                    <div class="product-image-wrapper">
+                                        <img class="product-image" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>">
+                                    </div>
+                                    <h3 class="product-title"><?php the_title(); ?></h3>
                                 </div>
-                                <h3 class="product-title"><?php the_title(); ?></h3>
-                                <div class="product-caption"><?php the_content(); ?></div>
-                                <div class="product-price">
-                                    <p>
-                                        <?php
-                                        $price = get_post_meta(get_the_ID(), '_regular_price', true);
-                                        echo $price ? esc_html($price) . ' تومان' : '—';
-                                        ?>
-                                    </p>
+                                <div class="content-wrapper">
+                                    <div class="product-caption"><?php the_content(); ?></div>
+                                    <div class="product-price">
+                                        <p>
+                                            <?php
+                                            $price = get_post_meta(get_the_ID(), '_regular_price', true);
+                                            echo $price ? esc_html($price) . ' تومان' : '—';
+                                            ?>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

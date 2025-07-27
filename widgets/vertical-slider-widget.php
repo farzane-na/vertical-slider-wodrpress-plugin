@@ -357,7 +357,7 @@ $this->add_responsive_control(
       $this->add_responsive_control(
           'caption_height',
           [
-              'label' => esc_html__( 'wrapper height', 'farzane-widget' ),
+              'label' => esc_html__( 'caption height', 'farzane-widget' ),
               'type' => \Elementor\Controls_Manager::SLIDER,
               'size_units' => [ 'px', '%', 'vw' ],
               'range' => [
@@ -375,7 +375,7 @@ $this->add_responsive_control(
                   ],
               ],
               'selectors' => [
-                  '{{WRAPPER}} .product-caption' => 'height: {{SIZE}}{{UNIT}};',
+                  '{{WRAPPER}} .product-caption p' => 'height: {{SIZE}}{{UNIT}};',
               ],
           ]
       );
@@ -392,7 +392,7 @@ $this->add_responsive_control(
                   ],
               ],
               'selectors' => [
-                  '{{WRAPPER}} .product-caption' => '-webkit-line-clamp: {{SIZE}};',
+                  '{{WRAPPER}} .product-caption p' => '-webkit-line-clamp: {{SIZE}};',
               ],
           ]
       );
@@ -642,7 +642,7 @@ $this->end_controls_section();
                                         <p>
                                             <?php
                                             $price = get_post_meta(get_the_ID(), '_regular_price', true);
-                                            echo $price ? esc_html($price) . ' تومان' : '—';
+                                            echo $price ? esc_html(number_format($price)) . ' تومان' : '—';
                                             ?>
                                         </p>
                                     </div>

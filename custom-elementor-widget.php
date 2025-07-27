@@ -19,12 +19,14 @@ add_action( 'elementor/init', 'init_custom_elementor_widgets' );
 function init_custom_elementor_widgets() {
     require_once __DIR__ . '/widgets/vertical-slider-widget.php';
     require_once __DIR__ . '/widgets/product-category-widget.php';
+    require_once __DIR__ . '/widgets/custom-add-to-cart.php';
 
     add_action( 'elementor/widgets/widgets_registered', 'register_custom_widget_elementor' );
 }
 function register_custom_widget_elementor( $widgets_manager ) {
    $widgets_manager->register( new \Vertical_Slider_Widget() );
    $widgets_manager->register( new \Product_Category_Widget() );
+   $widgets_manager->register(new \Custom_Add_To_Cart());
 }
 
 function vertical_slider_enqueue_assets() {

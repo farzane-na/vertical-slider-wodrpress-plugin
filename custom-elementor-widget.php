@@ -60,3 +60,34 @@ function vertical_slider_enqueue_assets() {
     );
 }
 add_action('wp_enqueue_scripts', 'vertical_slider_enqueue_assets');
+add_action( 'elementor/frontend/after_register_scripts', function() {
+    wp_register_script(
+        'custom-add-to-cart-script',
+        plugin_dir_url( __FILE__ ) . 'asset/js/add-to-cart/add-to-cart.js',
+        '1.0.0',
+        true
+    );
+});
+add_filter('woocommerce_add_cart_item_data', function($cart_item_data, $product_id, $variation_id) {
+    if (isset($_POST['custom_price'])) {
+        $cart_item_data['custom_price'] = floatval($_POST['custom_price']);
+    }
+    return $cart_item_data;
+}, 10, 3);
+add_action('woocommerce_before_calculate_totals', function($cart) {
+    if (is_admin() && !defined('DOING_AJAX')) return;
+    foreach ($cart->get_cart() as $cart_item) {
+        if (isset($cart_item['custom_price'])) {
+            $cart_item['data']->set_price($cart_item['custom_price']);
+        }
+    }
+});
+add_filter('woocommerce_get_item_data', function($item_data, $cart_item) {
+    if (isset($cart_item['custom_price'])) {
+        $item_data[] = [
+            'name' => __('Custom Price', 'farzane-widget'),
+            'value' => wc_price($cart_item['custom_price'])
+        ];
+    }
+    return $item_data;
+}, 10, 2);

@@ -15,7 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 // Register the widget.
 add_action( 'elementor/init', 'init_custom_elementor_widgets' );
-
 function init_custom_elementor_widgets() {
     require_once __DIR__ . '/widgets/vertical-slider-widget.php';
     require_once __DIR__ . '/widgets/product-category-widget.php';
@@ -68,26 +67,33 @@ add_action( 'elementor/frontend/after_register_scripts', function() {
         true
     );
 });
-add_filter('woocommerce_add_cart_item_data', function($cart_item_data, $product_id, $variation_id) {
-    if (isset($_POST['custom_price'])) {
-        $cart_item_data['custom_price'] = floatval($_POST['custom_price']);
-    }
-    return $cart_item_data;
-}, 10, 3);
-add_action('woocommerce_before_calculate_totals', function($cart) {
+
+add_action('woocommerce_before_calculate_totals', 'set_custom_price_for_custom_product', 10, 1);
+function set_custom_price_for_custom_product($cart) {
     if (is_admin() && !defined('DOING_AJAX')) return;
-    foreach ($cart->get_cart() as $cart_item) {
+
+    foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
         if (isset($cart_item['custom_price'])) {
+            // قیمت رو بروزرسانی کن
             $cart_item['data']->set_price($cart_item['custom_price']);
         }
     }
-});
-add_filter('woocommerce_get_item_data', function($item_data, $cart_item) {
+}
+add_filter('woocommerce_add_cart_item_data', 'add_custom_price_to_cart_item', 10, 3);
+function add_custom_price_to_cart_item($cart_item_data, $product_id, $variation_id) {
+    if (isset($_POST['custom_price'])) {
+        $cart_item_data['custom_price'] = (float) $_POST['custom_price'];
+    }
+    return $cart_item_data;
+}
+add_filter('woocommerce_get_item_data', 'display_custom_price_in_cart', 10, 2);
+function display_custom_price_in_cart($item_data, $cart_item) {
     if (isset($cart_item['custom_price'])) {
-        $item_data[] = [
-            'name' => __('Custom Price', 'farzane-widget'),
-            'value' => wc_price($cart_item['custom_price'])
-        ];
+        $item_data[] = array(
+            'name' => 'قیمت سفارشی',
+            'value' => wc_price($cart_item['custom_price']),
+        );
     }
     return $item_data;
-}, 10, 2);
+}
+

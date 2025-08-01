@@ -138,17 +138,41 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base {
             const renderForm = (type) => {
                 let html = "";
                 if (type === 'unit') {
-                    html = `<form method="POST" action="?add-to-cart=${productId}" class="unit-form">
-                        <select name="product-variable">
-                            <?php foreach ($product->get_available_variations() as $variation) : ?>
-                                <option value="<?php echo esc_attr($variation['variation_id']); ?>">
-                                    <?php echo wc_get_formatted_variation($variation, true, false, true); ?>
-                                </option>
-                            <?php endforeach; ?>
-                        </select>
-                        <input type="number" name="quantity" value="1" min="1">
-                        <input type="submit" value="<?php echo __('Add to Cart', 'farzane-widget'); ?>">
-                    </form>`;
+                    html = `<form method="POST" action="?add-to-cart=<?php echo esc_attr($product->get_id()); ?>" class="unit-form">
+    <select name="variation_id">
+        <?php
+                    if ($product->is_type('variable')) :
+                    $default_attributes = $product->get_default_attributes();
+
+                    foreach ($product->get_available_variations() as $variation_data) :
+                    $variation = wc_get_product($variation_data['variation_id']);
+                    $variation_attributes = $variation->get_attributes();
+
+                    // بررسی برای نمایش ندادن متغیر پیش‌فرض
+                    $is_default = true;
+                    foreach ($default_attributes as $name => $value) {
+                        if (!isset($variation_attributes[$name]) || $variation_attributes[$name] !== $value) {
+                            $is_default = false;
+                            break;
+                        }
+                    }
+
+                    if ($is_default) continue;
+                    $variation_label = wc_get_formatted_variation($variation, true, false, true);
+                    ?>
+                <option value="<?php echo esc_attr($variation->get_id()); ?>">
+                    <?php  echo esc_html($variation_label); ?>
+                </option>
+            <?php
+                    endforeach;
+                    endif;
+                    ?>
+    </select>
+
+    <input type="number" name="quantity" value="1" min="1">
+    <input type="submit" value="<?php echo __('Add to Cart', 'farzane-widget'); ?>">
+</form>
+`;
                 } else {
                     html = `<form method="POST" action="?add-to-cart=${productId}&variation_id=${defaultVariationId}" class="custom-form">
 

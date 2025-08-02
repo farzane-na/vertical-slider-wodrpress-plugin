@@ -1,17 +1,17 @@
 <?php
 /**
-* Plugin Name: custom elementor widgets
-* Description: Custom plugins that we can add to our Elementor.
-* Version: 1.0
-* Requires PHP:      7.4
-* Author: farzane nazmabadi
-* Author URI:        https://farzanenazmabadi.ir/
-* Text Domain:       farzane-widget
-* Domain Path:       /languages
-* Requires Plugins:  elementor
-*/
+ * Plugin Name: custom elementor widgets
+ * Description: Custom plugins that we can add to our Elementor.
+ * Version: 1.0
+ * Requires PHP:      7.4
+ * Author: farzane nazmabadi
+ * Author URI:        https://farzanenazmabadi.ir/
+ * Text Domain:       farzane-widget
+ * Domain Path:       /languages
+ * Requires Plugins:  elementor
+ */
 if ( ! defined( 'ABSPATH' ) ) {
-   exit;
+    exit;
 }
 function translate_plugin() {
     load_plugin_textdomain( 'farzane-widget', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -27,13 +27,13 @@ function init_custom_elementor_widgets() {
     add_action( 'elementor/widgets/widgets_registered', 'register_custom_widget_elementor' );
 }
 function register_custom_widget_elementor( $widgets_manager ) {
-   $widgets_manager->register( new \Vertical_Slider_Widget() );
-   $widgets_manager->register( new \Product_Category_Widget() );
-   $widgets_manager->register(new \Custom_Add_To_Cart());
+    $widgets_manager->register( new \Vertical_Slider_Widget() );
+    $widgets_manager->register( new \Product_Category_Widget() );
+    $widgets_manager->register(new \Custom_Add_To_Cart());
 }
 
 function vertical_slider_enqueue_assets() {
-   
+
     wp_register_style(
         'swiper-bundle-style',
         plugin_dir_url(__FILE__) . 'asset/css/swiper-bundle.min.css',
@@ -41,15 +41,15 @@ function vertical_slider_enqueue_assets() {
         '1.0.0'
     );
 
-    
-     wp_register_script(
+
+    wp_register_script(
         'swiper-bundle-script',
         plugin_dir_url(__FILE__) . 'asset/js/swiper-bundle.min.js',
         [],
         '1.0.0',
         true
     );
-     wp_register_style(
+    wp_register_style(
         'vertical-slider-style',
         plugin_dir_url(__FILE__) . 'asset/css/app.css',
         [],
@@ -168,9 +168,14 @@ function save_device_type_to_cart_item($cart_item_data, $product_id) {
     return $cart_item_data;
 }
 // ذخیره نوع دستگاه در آیتم سفارش
-add_action('woocommerce_add_order_item_meta', 'save_device_type_to_order_items', 10, 3);
-function save_device_type_to_order_items($item_id, $values, $cart_item_key) {
+// ذخیره نوع دستگاه در آیتم سفارش
+add_action('woocommerce_checkout_create_order_line_item', 'save_device_type_to_order_items', 10, 4);
+function save_device_type_to_order_items($item, $cart_item_key, $values, $order) {
     if (!empty($values['device_type'])) {
-        wc_add_order_item_meta($item_id, 'نوع دستگاه قهوه‌ساز', sanitize_text_field($values['device_type']));
+        $item->add_meta_data('نوع دستگاه قهوه‌ساز', sanitize_text_field($values['device_type']), true);
+    }
+
+    if (!empty($values['custom_price'])) {
+        $item->add_meta_data('قیمت سفارشی', wc_price($values['custom_price']), true);
     }
 }

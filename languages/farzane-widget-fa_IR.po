@@ -1,0 +1,490 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: custom elementor widget\n"
+"POT-Creation-Date: 2025-08-02 13:35+0330\n"
+"PO-Revision-Date: 2025-08-02 13:40+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Generator: Poedit 2.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: custom-elementor-widget.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: widgets/custom-add-to-cart.php:21
+msgid "Add To Cart"
+msgstr "افزودن به سبد خرید"
+
+#: widgets/custom-add-to-cart.php:46
+msgid "Content"
+msgstr "محتوا"
+
+#: widgets/custom-add-to-cart.php:51
+msgid "Choose Option Text"
+msgstr "متن انتخاب گزینه"
+
+#: widgets/custom-add-to-cart.php:56
+msgid "Choose By Unit text"
+msgstr "متن انتخاب بر اساس تعداد"
+
+#: widgets/custom-add-to-cart.php:61
+msgid "Choose Arbitrarily text"
+msgstr "متن انتخاب به صورت دلخواه"
+
+#: widgets/custom-add-to-cart.php:68
+msgid "Content Style"
+msgstr "استایل محتوا"
+
+#: widgets/custom-add-to-cart.php:73
+msgid "Option Text Color"
+msgstr "رنگ متن گزینه"
+
+#: widgets/custom-add-to-cart.php:81 widgets/custom-add-to-cart.php:101
+#: widgets/vertical-slider-widget.php:210
+#: widgets/vertical-slider-widget.php:273
+#: widgets/vertical-slider-widget.php:324
+msgid "Typography"
+msgstr "تایپوگرافی"
+
+#: widgets/custom-add-to-cart.php:88
+msgid "button Style"
+msgstr "استایل دکمه"
+
+#: widgets/custom-add-to-cart.php:93
+msgid "Submit Button Color"
+msgstr "رنگ دکمه سابمیت"
+
+#: widgets/custom-add-to-cart.php:108
+msgid "button background"
+msgstr "پس زمینه دکمه"
+
+#: widgets/custom-add-to-cart.php:170
+msgid "variables"
+msgstr "متغیرها"
+
+#: widgets/custom-add-to-cart.php:202
+msgid "quantity"
+msgstr "تعداد"
+
+#: widgets/custom-add-to-cart.php:206 widgets/custom-add-to-cart.php:219
+msgid "Choose type of your device"
+msgstr "نوع دستگاه خود را انتخاب کنید"
+
+#: widgets/custom-add-to-cart.php:207 widgets/custom-add-to-cart.php:220
+msgid "moka pot"
+msgstr "موکاپات"
+
+#: widgets/custom-add-to-cart.php:209 widgets/custom-add-to-cart.php:222
+msgid "Add to Cart"
+msgstr "افزودن به سبد خرید"
+
+#: widgets/custom-add-to-cart.php:215
+msgid "custom price"
+msgstr "مبلغ سفارشی"
+
+#: widgets/custom-add-to-cart.php:216
+msgid "300,000"
+msgstr "300,000"
+
+#: widgets/product-category-widget.php:38
+msgid "Product Categories widget"
+msgstr "ویجت دسته بندی محصولات"
+
+#: widgets/product-category-widget.php:90
+msgid "Layout"
+msgstr "طرح بندی"
+
+#: widgets/product-category-widget.php:101
+msgid "Categories Count"
+msgstr "تعداد دسته بندی ها"
+
+#: widgets/product-category-widget.php:112
+msgid "Query"
+msgstr "کوئری"
+
+#: widgets/product-category-widget.php:120
+msgid "Source"
+msgstr "منبع"
+
+#: widgets/product-category-widget.php:123
+msgid "Show All"
+msgstr "نمایش همه"
+
+#: widgets/product-category-widget.php:124
+msgid "Manual Selection"
+msgstr "انتخاب دستی"
+
+#: widgets/product-category-widget.php:125
+msgid "By Parent"
+msgstr "به وسیله والد"
+
+#: widgets/product-category-widget.php:126
+msgid "Current Subcategories"
+msgstr "زیر دسته در جریان"
+
+#: widgets/product-category-widget.php:142
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: widgets/product-category-widget.php:156
+msgid "Exclude Category"
+msgstr "دسته بندی مجزا"
+
+#: widgets/product-category-widget.php:164
+msgid "Only Top Level"
+msgstr "فقط سطح بالا"
+
+#: widgets/product-category-widget.php:168
+msgid "Parent"
+msgstr "والد"
+
+#: widgets/product-category-widget.php:181
+msgid "Hide Empty"
+msgstr "پنهان کردن خالی"
+
+#: widgets/product-category-widget.php:192
+msgid "Order By"
+msgstr "مرتب سازی بر اساس"
+
+#: widgets/product-category-widget.php:196
+msgid "Name"
+msgstr "نام"
+
+#: widgets/product-category-widget.php:197
+msgid "Slug"
+msgstr "اسلاگ"
+
+#: widgets/product-category-widget.php:198
+msgid "Description"
+msgstr "توضیحات"
+
+#: widgets/product-category-widget.php:199
+msgid "Count"
+msgstr "تعداد"
+
+#: widgets/product-category-widget.php:207
+msgid "Order"
+msgstr "ترتیب"
+
+#: widgets/product-category-widget.php:211
+msgid "ASC"
+msgstr "صعودی"
+
+#: widgets/product-category-widget.php:212
+msgid "DESC"
+msgstr "نرولی"
+
+#: widgets/product-category-widget.php:222
+msgid "Products"
+msgstr "محصولات"
+
+#: widgets/product-category-widget.php:232
+msgid ""
+"The style of this widget is often affected by your theme and plugins. If you "
+"experience any such issue, try to switch to a basic theme and deactivate "
+"related plugins."
+msgstr ""
+"سبک این ویجت اغلب تحت تأثیر قالب و افزونه‌های شما قرار می‌گیرد. اگر با چنین "
+"مشکلی مواجه شدید، سعی کنید قالب را به یک قالب ساده تغییر دهید و افزونه‌های "
+"مرتبط را غیرفعال کنید."
+
+#: widgets/product-category-widget.php:251
+msgid "Image"
+msgstr "تصویر"
+
+#: widgets/product-category-widget.php:268
+#: widgets/vertical-slider-widget.php:503
+msgid "Border Radius"
+msgstr "انحنای حاشیه"
+
+#: widgets/product-category-widget.php:280
+msgid "Spacing"
+msgstr "فاصله"
+
+#: widgets/product-category-widget.php:292
+#: widgets/vertical-slider-widget.php:553
+msgid "CSS Filters"
+msgstr "فیلتر های css"
+
+#: widgets/product-category-widget.php:300
+msgid "Title"
+msgstr "عنوان"
+
+#: widgets/product-category-widget.php:309
+msgid "Color"
+msgstr "رنگ"
+
+#: widgets/product-category-widget.php:333
+msgid "Title Spacing"
+msgstr "فاصله"
+
+#: widgets/product-category-widget.php:344
+#: widgets/vertical-slider-widget.php:217
+#: widgets/vertical-slider-widget.php:280
+#: widgets/vertical-slider-widget.php:331
+#: widgets/vertical-slider-widget.php:428
+msgid "Alignment"
+msgstr "ترازبندی"
+
+#: widgets/product-category-widget.php:348
+msgid "Left"
+msgstr "چپ"
+
+#: widgets/product-category-widget.php:352
+#: widgets/vertical-slider-widget.php:225
+#: widgets/vertical-slider-widget.php:288
+#: widgets/vertical-slider-widget.php:436
+msgid "Center"
+msgstr "وسط"
+
+#: widgets/product-category-widget.php:356
+msgid "Right"
+msgstr "راست"
+
+#: widgets/product-category-widget.php:371
+msgid "wrapper style"
+msgstr "استایل نگهدارنده"
+
+#: widgets/product-category-widget.php:378
+msgid "wrapper padding"
+msgstr "فاصله داخلی نگهدارنده"
+
+#: widgets/product-category-widget.php:390
+msgid "wrapepr background"
+msgstr "پس زمینه نگهدارنده"
+
+#: widgets/product-category-widget.php:399
+msgid "wrapper shadow"
+msgstr "سایه نگهدارنده"
+
+#: widgets/product-category-widget.php:406
+#: widgets/vertical-slider-widget.php:461
+msgid "wrapper width"
+msgstr "عرض نگهدارنده"
+
+#: widgets/product-category-widget.php:450
+msgid "No results found. "
+msgstr "هیچ نتیجه ای پیدا نشد. "
+
+#: widgets/vertical-slider-widget.php:29
+msgid "vertical slider"
+msgstr "اسلایدر عمودی"
+
+#: widgets/vertical-slider-widget.php:70
+msgid "card layout"
+msgstr "طرح بندی کارت"
+
+#: widgets/vertical-slider-widget.php:77
+msgid "direction"
+msgstr "جهت"
+
+#: widgets/vertical-slider-widget.php:81
+msgid "row"
+msgstr "افقی"
+
+#: widgets/vertical-slider-widget.php:85
+msgid "row reverse"
+msgstr "افقی معکوس"
+
+#: widgets/vertical-slider-widget.php:89
+msgid "column"
+msgstr "ستونی"
+
+#: widgets/vertical-slider-widget.php:93
+msgid "column reverse"
+msgstr "ستونی معکوس"
+
+#: widgets/vertical-slider-widget.php:106
+msgid "Justify Content"
+msgstr "تراز کردن محتوا"
+
+#: widgets/vertical-slider-widget.php:110
+#: widgets/vertical-slider-widget.php:148
+msgid "flex start"
+msgstr "ابتدا"
+
+#: widgets/vertical-slider-widget.php:114
+#: widgets/vertical-slider-widget.php:152
+msgid "center"
+msgstr "وسط"
+
+#: widgets/vertical-slider-widget.php:118
+#: widgets/vertical-slider-widget.php:156
+msgid "flex end"
+msgstr "انتها"
+
+#: widgets/vertical-slider-widget.php:122
+msgid "space between"
+msgstr "فاصله بینابینی"
+
+#: widgets/vertical-slider-widget.php:126
+msgid "space around"
+msgstr "فاصله اطراف"
+
+#: widgets/vertical-slider-widget.php:130
+msgid "space evenly"
+msgstr "فاصله یکنواخت"
+
+#: widgets/vertical-slider-widget.php:143
+msgid "Align Items"
+msgstr "تراز موارد"
+
+#: widgets/vertical-slider-widget.php:160
+msgid "stretch"
+msgstr "کشیده"
+
+#: widgets/vertical-slider-widget.php:172
+msgid "gap"
+msgstr "گپ"
+
+#: widgets/vertical-slider-widget.php:191
+msgid "Category Name"
+msgstr "عنوان دسته بندی"
+
+#: widgets/vertical-slider-widget.php:198
+msgid "Category Name Color"
+msgstr "رنگ عنوان دسته بندی"
+
+#: widgets/vertical-slider-widget.php:221
+#: widgets/vertical-slider-widget.php:284
+#: widgets/vertical-slider-widget.php:335
+#: widgets/vertical-slider-widget.php:432
+msgid "right"
+msgstr "راست"
+
+#: widgets/vertical-slider-widget.php:229
+#: widgets/vertical-slider-widget.php:292
+#: widgets/vertical-slider-widget.php:343
+#: widgets/vertical-slider-widget.php:440
+msgid "left"
+msgstr "چپ"
+
+#: widgets/vertical-slider-widget.php:242
+msgid "Product Category Name Spacing"
+msgstr "فاصله گذاری عنوان دسته بندی محصول"
+
+#: widgets/vertical-slider-widget.php:254
+msgid "content style"
+msgstr "استایل محتوا"
+
+#: widgets/vertical-slider-widget.php:261
+msgid "Title Color"
+msgstr "رنگ عنوان"
+
+#: widgets/vertical-slider-widget.php:312
+msgid "caption color"
+msgstr "رنگ کپشن"
+
+#: widgets/vertical-slider-widget.php:339
+msgid "cenetr"
+msgstr "وسط"
+
+#: widgets/vertical-slider-widget.php:347
+msgid "justify"
+msgstr "تراز"
+
+#: widgets/vertical-slider-widget.php:360
+msgid "caption height"
+msgstr "ارتفاع کپشن"
+
+#: widgets/vertical-slider-widget.php:385
+msgid "Line Clamp"
+msgstr "تعداد خطوط"
+
+#: widgets/vertical-slider-widget.php:409
+msgid "price color"
+msgstr "رنگ قیمت"
+
+#: widgets/vertical-slider-widget.php:421
+msgid "typography"
+msgstr "تایپوگرافی"
+
+#: widgets/vertical-slider-widget.php:454
+msgid "card style"
+msgstr "استایل کارت"
+
+#: widgets/vertical-slider-widget.php:487
+msgid "card background"
+msgstr "پس زمینه کارت"
+
+#: widgets/vertical-slider-widget.php:495
+msgid "Border"
+msgstr "حاشیه"
+
+#: widgets/vertical-slider-widget.php:514
+msgid "card padding"
+msgstr "فاصله داخلی کارت"
+
+#: widgets/vertical-slider-widget.php:526
+msgid "card shadow"
+msgstr "سایه کارت"
+
+#: widgets/vertical-slider-widget.php:534
+msgid "product image"
+msgstr "تصویر محصول"
+
+#: widgets/vertical-slider-widget.php:541
+msgid "border radius image"
+msgstr "انحنای حاشیه تصویر"
+
+#: widgets/vertical-slider-widget.php:561
+msgid "icons"
+msgstr "آیکون"
+
+#: widgets/vertical-slider-widget.php:568
+msgid "icon width"
+msgstr "عرض آیکون"
+
+#: widgets/vertical-slider-widget.php:593
+msgid "icons color"
+msgstr "رنگ آیکون"
+
+#. Plugin Name of the plugin/theme
+msgid "custom elementor widgets"
+msgstr "ویجت های سفارشی المنتور"
+
+#. Description of the plugin/theme
+msgid "Custom plugins that we can add to our Elementor."
+msgstr "افزونه های سفارشی که میتونیم به المنتور خودمون اضافه کنیم."
+
+#. Author of the plugin/theme
+msgid "farzane nazmabadi"
+msgstr "فرزانه نظم آبادی"
+
+#. Author URI of the plugin/theme
+msgid "https://farzanenazmabadi.ir/"
+msgstr "https://farzanenazmabadi.ir/"
+
+#~ msgid "Columns Gap"
+#~ msgstr "گپ ستون ها"
+
+#~ msgid "Rows Gap"
+#~ msgstr "گپ ردیف ها"
+
+#~ msgid "Post Type"
+#~ msgstr "نوع نوشته"
+
+#~ msgid "Posts"
+#~ msgstr "نوشته ها"
+
+#~ msgid "Pages"
+#~ msgstr "برگه ها"
+
+#~ msgid "Filter by Term"
+#~ msgstr "فیلتر بر اساس term"
+
+#~ msgid ""
+#~ "A slider that is displayed vertically and is suitable for mobile devices."
+#~ msgstr ""
+#~ "اسلایدری که به صورت عمودی نمایش داده می‌شود و برای دستگاه‌های تلفن همراه "
+#~ "مناسب است."

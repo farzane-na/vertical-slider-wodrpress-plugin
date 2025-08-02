@@ -5,6 +5,7 @@ use Elementor\Controls_Manager;
 use ElementorPro\Plugin;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Css_Filter;
+use Elementor\Group_Control_Background;
 
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
@@ -57,7 +58,7 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base {
         ]);
 
         $this->add_control('custom_option', [
-            'label' => __('Choose Arbitrarily', 'farzane-widget'),
+            'label' => __('Choose Arbitrarily text', 'farzane-widget'),
             'type' => Controls_Manager::TEXT,
         ]);
 
@@ -80,11 +81,88 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base {
             'label' => __('Typography', 'farzane-widget'),
             'selector' => '{{WRAPPER}} .choose-option-text',
         ]);
+        $this->add_control(
+            'options_style_divider',
+            [
+                'type' => \Elementor\Controls_Manager::DIVIDER,
+            ]
+        );
+        $this->add_group_control(Group_Control_Typography::get_type(), [
+            'name' => 'options_label_typography',
+            'label' => __('Options Typography', 'farzane-widget'),
+            'selector' => '{{WRAPPER}} .options-label',
+        ]);
 
+        $this->end_controls_section();
+
+        $this->start_controls_section('submit_button_style', [
+            'label' => __('button Style', 'farzane-widget'),
+            'tab' => Controls_Manager::TAB_STYLE,
+        ]);
+
+        $this->add_control('submit_button_color', [
+            'label' => __('Submit Button Color', 'farzane-widget'),
+            'type' => Controls_Manager::COLOR,
+            'default' => '#333333',
+            'selectors' => ['{{WRAPPER}} .submit-form-button' => 'color: {{VALUE}};'],
+        ]);
+
+        $this->add_group_control(Group_Control_Typography::get_type(), [
+            'name' => 'submit_button_typography',
+            'label' => __('Typography', 'farzane-widget'),
+            'selector' => '{{WRAPPER}} .submit-form-button',
+        ]);
+        $this->add_group_control(
+            \Elementor\Group_Control_Background::get_type(),
+            [
+                'name' => 'submit_button_background',
+                'label' => __('button background','farzane-widget'),
+                'types' => [ 'classic', 'gradient' ],
+                'selector' => '{{WRAPPER}} .submit-form-button',
+            ]
+        );
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'label' => esc_html__( 'Border', 'farzane-widget' ),
+                'name' => 'submit_button_border',
+                'selector' => '{{WRAPPER}} .submit-form-button',
+            ]
+        );
+        $this->add_responsive_control(
+            'submit_button_radius',
+            [
+                'label' => esc_html__( 'Border Radius', 'text-domain' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} .submit-form-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+                "label_input_text",
+            [
+                    "label"=>__("input and label", "farzane-widget"),
+                "tab"=>Controls_Manager::TAB_STYLE
+            ]
+        );
+        $this->add_group_control(
+                Group_Control_Typography::get_type(),
+            [
+                'name' => 'input_and_label_typography',
+                'label' => __('Typography', 'farzane-widget'),
+                'selector' => '{{WRAPPER}} .input-wrapper',
+            ]
+        );
         $this->end_controls_section();
     }
 
     protected function render() {
+        wp_enqueue_style('custom-add-to-cart-style');
         $settings = $this->get_settings_for_display();
         global $product;
         if (!$product || !$product->is_type('variable')) return;
@@ -114,16 +192,15 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base {
                 <h5 class="choose-option-text"><?php echo esc_html($settings['choose_buy_option_text']); ?></h5>
                 <div class="option-wrapper">
                     <input type="radio" name="buying-option" id="unit-option" class="buying-option-checkbox" checked>
-                    <label for="unit-option" class="unit-option-label"><?php echo esc_html($settings['choose_by_unit_option']); ?></label>
+                    <label for="unit-option" class="options-label unit-option-label"><?php echo esc_html($settings['choose_by_unit_option']); ?></label>
                 </div>
                 <div class="option-wrapper">
                     <input type="radio" name="buying-option" id="custom-option" class="buying-option-checkbox">
-                    <label for="custom-option" class="custom-option-label"><?php echo esc_html($settings['custom_option']); ?></label>
+                    <label for="custom-option" class="options-label custom-option-label"><?php echo esc_html($settings['custom_option']); ?></label>
                 </div>
             </div>
-            <div class="buying-detail-column">
-                <div class="detail-option-box"></div>
-
+            <div class="buying-detail-column detail-option-box">
+<!--                <div class="detail-option-box"></div>-->
             </div>
         </div>
         <script>
@@ -136,7 +213,9 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base {
                 let html = "";
                 if (type === 'unit') {
                     html = `<form method="POST" action="?add-to-cart=<?php echo esc_attr($product->get_id()); ?>" class="unit-form">
-    <select name="variation_id">
+                    <div class="input-wrapper">
+                    <label for="variation-id-select"><?php echo __("variables","farzane-widget") ?></label>
+    <select name="variation_id" id="variation-id-select">
         <?php
                     if ($product->is_type('variable')) :
                     $default_attributes = $product->get_default_attributes();
@@ -165,22 +244,29 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base {
                     endif;
                     ?>
     </select>
-
-    <input type="number" name="quantity" value="1" min="1"><div class="device-type-box">
-                    <h6 class="device-type-title"><?php echo __("Choose type of your device", "farzane-widget") ?></h6>
-                    <input type="text" class="device-type-input" name="device-type" required>
+    </div>
+    <div class="input-wrapper">
+    <label for="product-quantity" ><?php echo __("quantity","farzane-widget") ?></label>
+    <input id="product-quantity" type="number" name="quantity" value="1" min="1">
+    </div>
+    <div class="input-wrapper">
+                    <label for="device-type" class="device-type-title"><?php echo __("Choose type of your device", "farzane-widget") ?></label>
+                    <input id="device-type" type="text" class="device-type-input" name="device-type" required placeholder="<?php echo __("moka pot","farzane-widget") ?>">
                 </div>
-    <input type="submit" value="<?php echo __('Add to Cart', 'farzane-widget'); ?>">
+    <input type="submit" class="submit-form-button" value="<?php echo __('Add to Cart', 'farzane-widget'); ?>">
 </form>
 `;
                 } else {
                     html = `<form method="POST" action="?add-to-cart=${productId}&variation_id=${defaultVariationId}" class="custom-form">
-
-                        <input type="text" class="visible-price" name="custom_price" required><div class="device-type-box">
-                    <h6 class="device-type-title"><?php echo __("Choose type of your device", "farzane-widget") ?></h6>
-                    <input type="text" class="device-type-input" name="device-type" required>
+                        <div class="input-wrapper">
+                        <label for="custom-price-input" ><?php echo __("custom price","farzane-widget") ?></label>
+                        <input type="text" id="custom-price-input" class="visible-price " name="custom_price" required placeholder="<?php echo __("300,000","farzane-widget") ?>">
+                        </div>
+                    <div class="input-wrapper">
+                    <label for="device-type" class="device-type-title"><?php echo __("Choose type of your device", "farzane-widget") ?></label>
+                    <input id="device-type" type="text" class="device-type-input" name="device-type" required placeholder="<?php echo __("moka pot","farzane-widget") ?>">
                 </div>
-                        <input type="submit" value="<?php echo __('Add to Cart', 'farzane-widget'); ?>">
+                        <input class="submit-form-button" type="submit" value="<?php echo __('Add to Cart', 'farzane-widget'); ?>">
                     </form>`;
                 }
                 detailBox.innerHTML = html;

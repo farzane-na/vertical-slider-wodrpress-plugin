@@ -1,0 +1,57 @@
+.add-cart-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 20px;
+}
+.option-column , .buying-detail-column form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.option-column{
+    width:30%;
+}
+.option-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+.buying-detail-column{
+    width:70%;
+}
+.option-column input[type='radio']{
+    accent-color: #222831;
+}
+.input-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:10px;
+}
+.input-wrapper label{
+    width: 60%;
+}
+.add-cart-wrapper input[type="text"] , .add-cart-wrapper input[type="number"] , .add-cart-wrapper select , .add-cart-wrapper option{
+    border: 1px solid #222831;
+    background-color: transparent;
+    color:#222831;
+    outline: none;
+}
+.add-cart-wrapper input[type="text"]:focus , .add-cart-wrapper input[type="number"]:focus{
+    outline: none;
+}
+@media (max-width:800px){
+    .add-cart-wrapper{
+        flex-direction: column;
+    }
+    .option-column , .buying-detail-column{
+        width:100%;
+    }
+}
+@media (max-width:550px){
+    .input-wrapper{
+        flex-direction: column;
+    }
+}

@@ -13,6 +13,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
    exit;
 }
+function translate_plugin() {
+    load_plugin_textdomain( 'farzane-widget', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'translate_plugin' );
 // Register the widget.
 add_action( 'elementor/init', 'init_custom_elementor_widgets' );
 function init_custom_elementor_widgets() {
@@ -44,29 +48,35 @@ function vertical_slider_enqueue_assets() {
         [],
         '1.0.0',
         true
-    ); wp_register_style(
-        'farzane-widget-style',
+    );
+     wp_register_style(
+        'vertical-slider-style',
         plugin_dir_url(__FILE__) . 'asset/css/app.css',
         [],
         '1.0.0'
     );
     wp_register_script(
-        'farzane-widget-script',
+        'vertical-slider-script',
         plugin_dir_url(__FILE__) . 'asset/js/app.js',
-        ['jquery'],
         '1.0.0',
         true
+    );
+    wp_register_style(
+        'custom-add-to-cart-style',
+        plugin_dir_url(__FILE__).'asset/css/add-to-cart-style.css',
+        [],
+        '1.0.0'
     );
 }
 add_action('wp_enqueue_scripts', 'vertical_slider_enqueue_assets');
-add_action( 'elementor/frontend/after_register_scripts', function() {
-    wp_register_script(
-        'custom-add-to-cart-script',
-        plugin_dir_url( __FILE__ ) . 'asset/js/add-to-cart/add-to-cart.js',
-        '1.0.0',
-        true
-    );
-});
+//add_action( 'elementor/frontend/after_register_scripts', function() {
+//    wp_register_script(
+//        'custom-add-to-cart-script',
+//        plugin_dir_url( __FILE__ ) . 'asset/js/add-to-cart/add-to-cart.js',
+//        '1.0.0',
+//        true
+//    );
+//});
 
 //add_action('woocommerce_before_calculate_totals', 'set_custom_price_for_custom_product', 10, 1);
 //function set_custom_price_for_custom_product($cart) {

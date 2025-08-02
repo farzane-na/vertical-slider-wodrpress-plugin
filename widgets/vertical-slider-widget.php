@@ -604,8 +604,8 @@ $this->end_controls_section();
     protected function render() {
         wp_enqueue_script('swiper-bundle-script');
         wp_enqueue_style('swiper-bundle-style');
-        wp_enqueue_style('farzane-widget-style');
-        wp_enqueue_script('farzane-widget-script');
+        wp_enqueue_style('vertical-slider-style');
+        wp_enqueue_script('vertical-slider-script');
 
         $args = [
             'posts_per_page' => -1,

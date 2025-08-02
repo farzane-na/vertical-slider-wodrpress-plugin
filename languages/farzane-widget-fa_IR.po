@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: custom elementor widget\n"
-"POT-Creation-Date: 2025-08-02 13:35+0330\n"
-"PO-Revision-Date: 2025-08-02 13:40+0330\n"
+"POT-Creation-Date: 2025-08-02 16:32+0330\n"
+"PO-Revision-Date: 2025-08-02 16:33+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -21,78 +21,112 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: widgets/custom-add-to-cart.php:21
+#: widgets/custom-add-to-cart.php:24
 msgid "Add To Cart"
 msgstr "افزودن به سبد خرید"
 
-#: widgets/custom-add-to-cart.php:46
+#: widgets/custom-add-to-cart.php:55
 msgid "Content"
 msgstr "محتوا"
 
-#: widgets/custom-add-to-cart.php:51
+#: widgets/custom-add-to-cart.php:60
 msgid "Choose Option Text"
 msgstr "متن انتخاب گزینه"
 
-#: widgets/custom-add-to-cart.php:56
+#: widgets/custom-add-to-cart.php:65
 msgid "Choose By Unit text"
 msgstr "متن انتخاب بر اساس تعداد"
 
-#: widgets/custom-add-to-cart.php:61
+#: widgets/custom-add-to-cart.php:70
 msgid "Choose Arbitrarily text"
 msgstr "متن انتخاب به صورت دلخواه"
 
-#: widgets/custom-add-to-cart.php:68
+#: widgets/custom-add-to-cart.php:77
 msgid "Content Style"
 msgstr "استایل محتوا"
 
-#: widgets/custom-add-to-cart.php:73
+#: widgets/custom-add-to-cart.php:82
 msgid "Option Text Color"
 msgstr "رنگ متن گزینه"
 
-#: widgets/custom-add-to-cart.php:81 widgets/custom-add-to-cart.php:101
-#: widgets/vertical-slider-widget.php:210
+#: widgets/custom-add-to-cart.php:90 widgets/custom-add-to-cart.php:172
+#: widgets/custom-add-to-cart.php:208 widgets/vertical-slider-widget.php:210
 #: widgets/vertical-slider-widget.php:273
 #: widgets/vertical-slider-widget.php:324
 msgid "Typography"
 msgstr "تایپوگرافی"
 
-#: widgets/custom-add-to-cart.php:88
+#: widgets/custom-add-to-cart.php:101
+msgid "Options Typography"
+msgstr "تایپوگرافی گزینه ها"
+
+#: widgets/custom-add-to-cart.php:108
 msgid "button Style"
 msgstr "استایل دکمه"
 
-#: widgets/custom-add-to-cart.php:93
-msgid "Submit Button Color"
-msgstr "رنگ دکمه سابمیت"
-
-#: widgets/custom-add-to-cart.php:108
-msgid "button background"
+#: widgets/custom-add-to-cart.php:115
+msgid "Button Background"
 msgstr "پس زمینه دکمه"
 
-#: widgets/custom-add-to-cart.php:170
+#: widgets/custom-add-to-cart.php:125
+msgid "Normal"
+msgstr "عادی"
+
+#: widgets/custom-add-to-cart.php:131
+msgid "Text Color"
+msgstr "رنگ متن"
+
+#: widgets/custom-add-to-cart.php:144
+msgid "Hover"
+msgstr "هاور"
+
+#: widgets/custom-add-to-cart.php:151
+msgid "Button Hover Background"
+msgstr "پس زمینه هاور دکمه"
+
+#: widgets/custom-add-to-cart.php:159
+msgid "Text Hover Color"
+msgstr "رنگ هاور متن"
+
+#: widgets/custom-add-to-cart.php:178 widgets/vertical-slider-widget.php:495
+msgid "Border"
+msgstr "حاشیه"
+
+#: widgets/custom-add-to-cart.php:186 widgets/custom-add-to-cart.php:215
+#: widgets/product-category-widget.php:268
+#: widgets/vertical-slider-widget.php:503
+msgid "Border Radius"
+msgstr "انحنای حاشیه"
+
+#: widgets/custom-add-to-cart.php:200
+msgid "input and label"
+msgstr "ورودی ها و لیبل ها"
+
+#: widgets/custom-add-to-cart.php:282
 msgid "variables"
 msgstr "متغیرها"
 
-#: widgets/custom-add-to-cart.php:202
+#: widgets/custom-add-to-cart.php:314
 msgid "quantity"
 msgstr "تعداد"
 
-#: widgets/custom-add-to-cart.php:206 widgets/custom-add-to-cart.php:219
-msgid "Choose type of your device"
-msgstr "نوع دستگاه خود را انتخاب کنید"
+#: widgets/custom-add-to-cart.php:318 widgets/custom-add-to-cart.php:331
+msgid "type of your device"
+msgstr "نوع دستگاه"
 
-#: widgets/custom-add-to-cart.php:207 widgets/custom-add-to-cart.php:220
+#: widgets/custom-add-to-cart.php:319 widgets/custom-add-to-cart.php:332
 msgid "moka pot"
 msgstr "موکاپات"
 
-#: widgets/custom-add-to-cart.php:209 widgets/custom-add-to-cart.php:222
+#: widgets/custom-add-to-cart.php:321 widgets/custom-add-to-cart.php:334
 msgid "Add to Cart"
 msgstr "افزودن به سبد خرید"
 
-#: widgets/custom-add-to-cart.php:215
+#: widgets/custom-add-to-cart.php:327
 msgid "custom price"
 msgstr "مبلغ سفارشی"
 
-#: widgets/custom-add-to-cart.php:216
+#: widgets/custom-add-to-cart.php:328
 msgid "300,000"
 msgstr "300,000"
 
@@ -201,11 +235,6 @@ msgstr ""
 #: widgets/product-category-widget.php:251
 msgid "Image"
 msgstr "تصویر"
-
-#: widgets/product-category-widget.php:268
-#: widgets/vertical-slider-widget.php:503
-msgid "Border Radius"
-msgstr "انحنای حاشیه"
 
 #: widgets/product-category-widget.php:280
 msgid "Spacing"
@@ -417,10 +446,6 @@ msgstr "استایل کارت"
 msgid "card background"
 msgstr "پس زمینه کارت"
 
-#: widgets/vertical-slider-widget.php:495
-msgid "Border"
-msgstr "حاشیه"
-
 #: widgets/vertical-slider-widget.php:514
 msgid "card padding"
 msgstr "فاصله داخلی کارت"
@@ -464,6 +489,9 @@ msgstr "فرزانه نظم آبادی"
 #. Author URI of the plugin/theme
 msgid "https://farzanenazmabadi.ir/"
 msgstr "https://farzanenazmabadi.ir/"
+
+#~ msgid "Submit Button Color"
+#~ msgstr "رنگ دکمه سابمیت"
 
 #~ msgid "Columns Gap"
 #~ msgstr "گپ ستون ها"

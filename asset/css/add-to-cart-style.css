@@ -10,7 +10,7 @@
     gap:10px;
 }
 .option-column{
-    width:30%;
+    width:35%;
 }
 .option-wrapper{
     display: flex;
@@ -19,7 +19,7 @@
     gap: 5px;
 }
 .buying-detail-column{
-    width:70%;
+    width:65%;
 }
 .option-column input[type='radio']{
     accent-color: #222831;

@@ -123,10 +123,7 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base {
             </div>
             <div class="buying-detail-column">
                 <div class="detail-option-box"></div>
-                <div class="device-type-box">
-                    <h6 class="device-type-title"><?php echo __("Choose type of your device", "farzane-widget") ?></h6>
-                    <input type="text" class="device-type-input" name="device-type">
-                </div>
+
             </div>
         </div>
         <script>
@@ -169,14 +166,20 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base {
                     ?>
     </select>
 
-    <input type="number" name="quantity" value="1" min="1">
+    <input type="number" name="quantity" value="1" min="1"><div class="device-type-box">
+                    <h6 class="device-type-title"><?php echo __("Choose type of your device", "farzane-widget") ?></h6>
+                    <input type="text" class="device-type-input" name="device-type" required>
+                </div>
     <input type="submit" value="<?php echo __('Add to Cart', 'farzane-widget'); ?>">
 </form>
 `;
                 } else {
                     html = `<form method="POST" action="?add-to-cart=${productId}&variation_id=${defaultVariationId}" class="custom-form">
 
-                        <input type="text" class="visible-price" name="custom_price">
+                        <input type="text" class="visible-price" name="custom_price" required><div class="device-type-box">
+                    <h6 class="device-type-title"><?php echo __("Choose type of your device", "farzane-widget") ?></h6>
+                    <input type="text" class="device-type-input" name="device-type" required>
+                </div>
                         <input type="submit" value="<?php echo __('Add to Cart', 'farzane-widget'); ?>">
                     </form>`;
                 }

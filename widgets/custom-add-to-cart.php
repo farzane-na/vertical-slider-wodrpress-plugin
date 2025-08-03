@@ -230,6 +230,18 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
         global $product;
         if (!$product || !$product->is_type('variable')) return;
 
+
+        $variations_data = [];
+        foreach ($product->get_available_variations() as $variation) {
+            $variation_obj = wc_get_product($variation['variation_id']);
+            $variations_data[] = [
+                'id' => $variation['variation_id'],
+                'price_html' => $variation_obj->get_price_html(),
+            ];
+        }
+
+
+
         $custom_product_id = $product->get_id();
         $default_attributes = $product->get_default_attributes();
         $default_variation_id = 0;
@@ -269,6 +281,7 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
             </div>
         </div>
         <script>
+            const productVariations = <?php echo json_encode($variations_data); ?>;
             const detailBox = document.querySelector(".detail-option-box");
             const radios = document.querySelectorAll(".buying-option-checkbox");
             const defaultVariationId = "<?php echo esc_js($default_variation_id); ?>";
@@ -335,6 +348,23 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
                     </form>`;
                 }
                 detailBox.innerHTML = html;
+                const select = document.querySelector("#variation-id-select");
+                const priceBox = document.createElement("div");
+                priceBox.classList.add("variation-price-box");
+                select.parentNode.appendChild(priceBox); // نمایش زیر select
+
+                const updatePrice = () => {
+                    const selectedId = parseInt(select.value);
+                    const variation = productVariations.find(v => v.id === selectedId);
+                    if (variation) {
+                        priceBox.innerHTML = `<strong>${variation.price_html}</strong>`;
+                    } else {
+                        priceBox.innerHTML = "";
+                    }
+                };
+
+                select.addEventListener("change", updatePrice);
+                updatePrice();
             }
 
             radios.forEach(el => el.addEventListener('change', (e) => renderForm(e.target.id)));

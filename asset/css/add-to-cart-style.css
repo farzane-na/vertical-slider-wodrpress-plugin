@@ -29,6 +29,12 @@
     justify-content: flex-start;
     align-items: center;
     gap:10px;
+    position: relative;
+}
+.input-wrapper .variation-price-box{
+    position: absolute;
+    left:0px;
+    top:-20px;
 }
 .input-wrapper label{
     width: 60%;
@@ -48,6 +54,14 @@
     }
     .option-column , .buying-detail-column{
         width:100%;
+    }
+}
+@media (max-width:768px){
+    .input-wrapper{
+        align-items: start;
+    }
+    .input-wrapper .variation-price-box{
+        top:0px;
     }
 }
 @media (max-width:550px){

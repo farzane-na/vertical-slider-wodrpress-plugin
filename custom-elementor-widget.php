@@ -119,8 +119,10 @@ add_action('wp_enqueue_scripts', 'vertical_slider_enqueue_assets');
 add_filter('woocommerce_add_cart_item_data', 'add_custom_data_to_cart_item', 10, 3);
 function add_custom_data_to_cart_item($cart_item_data, $product_id, $variation_id) {
     if (isset($_POST['custom_price'])) {
-        $cart_item_data['custom_price'] = (float) number_format( $_POST['custom_price']);
+        $custom_price = preg_replace('/[^\d.]/', '', $_POST['custom_price']);
+        $cart_item_data['custom_price'] = floatval($custom_price);
     }
+
 
     if (!empty($_POST['device-type'])) {
         $cart_item_data['device_type'] = sanitize_text_field($_POST['device-type']);

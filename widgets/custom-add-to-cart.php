@@ -338,7 +338,7 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
                     html = `<form method="POST" action="?add-to-cart=${productId}&variation_id=${defaultVariationId}" class="custom-form">
                         <div class="input-wrapper">
                         <label for="custom-price-input" ><?php echo __("custom price", "farzane-widget") ?></label>
-                        <input type="text" id="custom-price-input" class="fwi visible-price " name="custom_price" required placeholder="<?php echo __("300,000", "farzane-widget") ?>">
+                        <input type="text" id="custom-price-input" class="fwi visible-price " name="custom_price" required placeholder="<?php echo __("300000", "farzane-widget") ?>">
                         </div>
                     <div class="input-wrapper">
                     <label for="device-type" class="device-type-title"><?php echo __("type of your device", "farzane-widget") ?></label>

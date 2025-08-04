@@ -39,6 +39,9 @@
 .input-wrapper label{
     width: 60%;
 }
+.input-wrapper input::placeholder{
+    color: #232832ab;
+}
 .add-cart-wrapper input[type="text"] , .add-cart-wrapper input[type="number"] , .add-cart-wrapper select , .add-cart-wrapper option{
     border: 1px solid #222831;
     background-color: transparent;

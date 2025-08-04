@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: custom elementor widget\n"
-"POT-Creation-Date: 2025-08-02 16:32+0330\n"
-"PO-Revision-Date: 2025-08-02 16:33+0330\n"
+"POT-Creation-Date: 2025-08-04 15:04+0330\n"
+"PO-Revision-Date: 2025-08-04 15:05+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -102,33 +102,37 @@ msgstr "انحنای حاشیه"
 msgid "input and label"
 msgstr "ورودی ها و لیبل ها"
 
-#: widgets/custom-add-to-cart.php:282
+#: widgets/custom-add-to-cart.php:295
 msgid "variables"
 msgstr "متغیرها"
 
-#: widgets/custom-add-to-cart.php:314
+#: widgets/custom-add-to-cart.php:327
 msgid "quantity"
 msgstr "تعداد"
 
-#: widgets/custom-add-to-cart.php:318 widgets/custom-add-to-cart.php:331
+#: widgets/custom-add-to-cart.php:331 widgets/custom-add-to-cart.php:344
 msgid "type of your device"
 msgstr "نوع دستگاه"
 
-#: widgets/custom-add-to-cart.php:319 widgets/custom-add-to-cart.php:332
-msgid "moka pot"
-msgstr "موکاپات"
+#: widgets/custom-add-to-cart.php:332
+msgid "For Example : Moka Pot"
+msgstr "برای مثال : موکاپات"
 
-#: widgets/custom-add-to-cart.php:321 widgets/custom-add-to-cart.php:334
+#: widgets/custom-add-to-cart.php:334 widgets/custom-add-to-cart.php:347
 msgid "Add to Cart"
 msgstr "افزودن به سبد خرید"
 
-#: widgets/custom-add-to-cart.php:327
+#: widgets/custom-add-to-cart.php:340
 msgid "custom price"
 msgstr "مبلغ سفارشی"
 
-#: widgets/custom-add-to-cart.php:328
-msgid "300,000"
-msgstr "300,000"
+#: widgets/custom-add-to-cart.php:341
+msgid "For Example : 300000"
+msgstr "برای مثال : 300000"
+
+#: widgets/custom-add-to-cart.php:345
+msgid "moka pot"
+msgstr "موکاپات"
 
 #: widgets/product-category-widget.php:38
 msgid "Product Categories widget"
@@ -489,6 +493,9 @@ msgstr "فرزانه نظم آبادی"
 #. Author URI of the plugin/theme
 msgid "https://farzanenazmabadi.ir/"
 msgstr "https://farzanenazmabadi.ir/"
+
+#~ msgid "300,000"
+#~ msgstr "300,000"
 
 #~ msgid "Submit Button Color"
 #~ msgstr "رنگ دکمه سابمیت"

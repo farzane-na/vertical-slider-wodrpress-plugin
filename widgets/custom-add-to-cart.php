@@ -329,7 +329,7 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
     </div>
     <div class="input-wrapper">
                     <label for="device-type" class="device-type-title"><?php echo __("type of your device", "farzane-widget") ?></label>
-                    <input id="device-type" type="text" class="fwi device-type-input" name="device-type" required placeholder="<?php echo __("moka pot", "farzane-widget") ?>">
+                    <input id="device-type" type="text" class="fwi device-type-input" name="device-type" required placeholder="<?php echo __("For Example : Moka Pot", "farzane-widget") ?>">
                 </div>
     <input type="submit" class="submit-form-button" value="<?php echo __('Add to Cart', 'farzane-widget'); ?>">
 </form>
@@ -338,7 +338,7 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
                     html = `<form method="POST" action="?add-to-cart=${productId}&variation_id=${defaultVariationId}" class="custom-form">
                         <div class="input-wrapper">
                         <label for="custom-price-input" ><?php echo __("custom price", "farzane-widget") ?></label>
-                        <input type="text" id="custom-price-input" class="fwi visible-price " name="custom_price" required placeholder="<?php echo __("300000", "farzane-widget") ?>">
+                        <input type="text" id="custom-price-input" class="fwi visible-price " name="custom_price" required placeholder="<?php echo __("For Example : 300000", "farzane-widget") ?>">
                         </div>
                     <div class="input-wrapper">
                     <label for="device-type" class="device-type-title"><?php echo __("type of your device", "farzane-widget") ?></label>

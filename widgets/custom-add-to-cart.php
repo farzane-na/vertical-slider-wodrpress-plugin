@@ -8,7 +8,7 @@ use Elementor\Group_Control_Css_Filter;
 use Elementor\Group_Control_Background;
 
 if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
+    exit;
 }
 
 class Custom_Add_To_Cart extends \Elementor\Widget_Base
@@ -164,7 +164,7 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
             ]
         );
 
-        $this->end_controls_tab(); // End hover tab
+        $this->end_controls_tab();
         $this->end_controls_tabs();
 
         $this->add_group_control(Group_Control_Typography::get_type(), [
@@ -240,8 +240,6 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
             ];
         }
 
-
-
         $custom_product_id = $product->get_id();
         $default_attributes = $product->get_default_attributes();
         $default_variation_id = 0;
@@ -277,7 +275,7 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
                 </div>
             </div>
             <div class="buying-detail-column detail-option-box">
-                <!--                <div class="detail-option-box"></div>-->
+
             </div>
         </div>
         <script>
@@ -302,7 +300,6 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
                     $variation = wc_get_product($variation_data['variation_id']);
                     $variation_attributes = $variation->get_attributes();
 
-                    // بررسی برای نمایش ندادن متغیر پیش‌فرض
                     $is_default = true;
                     foreach ($default_attributes as $name => $value) {
                         if (!isset($variation_attributes[$name]) || $variation_attributes[$name] !== $value) {
@@ -351,7 +348,7 @@ class Custom_Add_To_Cart extends \Elementor\Widget_Base
                 const select = document.querySelector("#variation-id-select");
                 const priceBox = document.createElement("div");
                 priceBox.classList.add("variation-price-box");
-                select.parentNode.appendChild(priceBox); // نمایش زیر select
+                select.parentNode.appendChild(priceBox);
 
                 const updatePrice = () => {
                     const selectedId = parseInt(select.value);

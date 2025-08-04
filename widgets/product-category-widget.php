@@ -1,5 +1,4 @@
 <?php
-//namespace ElementorPro\Modules\Woocommerce\Widgets;
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
@@ -54,20 +53,9 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
         return [ 'basic' ];
     }
 
-    /**
-     * Get style dependencies.
-     *
-     * Retrieve the list of style dependencies the widget requires.
-     *
-     * @since 3.24.0
-     * @access public
-     *
-     * @return array Widget style dependencies.
-     */
     public function get_style_depends(): array {
         return [ 'widget-woocommerce-products', 'widget-woocommerce-categories' ];
     }
-//    get taxonomy
     private function get_product_categories_options() {
         $terms = get_terms([
             'taxonomy' => 'product_cat',
@@ -91,9 +79,6 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
-
-
-//		$this->add_columns_responsive_control();
 
         $this->add_control(
             'number',
@@ -241,9 +226,6 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
                 'prefix_class' => 'farzane-widgetducts-grid elementor-',
             ]
         );
-
-
-
 
         $this->add_control(
             'heading_image_style',
@@ -427,7 +409,6 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
         );
         $this->end_controls_section();
     }
-    ///////////
     public function render() {
         $settings = $this->get_settings_for_display();
         $exclude_categories = $settings['product_exclude_categories'] ?? [];
@@ -473,7 +454,6 @@ class Product_Category_Widget extends \Elementor\Widget_Base {
 
         echo '</div>';
     }
-    ////////
 
     public function get_group_name() {
         return 'woocommerce';

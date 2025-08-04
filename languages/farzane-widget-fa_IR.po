@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: custom elementor widget\n"
-"POT-Creation-Date: 2025-08-04 15:04+0330\n"
-"PO-Revision-Date: 2025-08-04 15:05+0330\n"
+"POT-Creation-Date: 2025-08-04 15:11+0330\n"
+"PO-Revision-Date: 2025-08-04 15:11+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -93,7 +93,7 @@ msgid "Border"
 msgstr "حاشیه"
 
 #: widgets/custom-add-to-cart.php:186 widgets/custom-add-to-cart.php:215
-#: widgets/product-category-widget.php:268
+#: widgets/product-category-widget.php:250
 #: widgets/vertical-slider-widget.php:503
 msgid "Border Radius"
 msgstr "انحنای حاشیه"
@@ -102,131 +102,131 @@ msgstr "انحنای حاشیه"
 msgid "input and label"
 msgstr "ورودی ها و لیبل ها"
 
-#: widgets/custom-add-to-cart.php:295
+#: widgets/custom-add-to-cart.php:293
 msgid "variables"
 msgstr "متغیرها"
 
-#: widgets/custom-add-to-cart.php:327
+#: widgets/custom-add-to-cart.php:324
 msgid "quantity"
 msgstr "تعداد"
 
-#: widgets/custom-add-to-cart.php:331 widgets/custom-add-to-cart.php:344
+#: widgets/custom-add-to-cart.php:328 widgets/custom-add-to-cart.php:341
 msgid "type of your device"
 msgstr "نوع دستگاه"
 
-#: widgets/custom-add-to-cart.php:332
+#: widgets/custom-add-to-cart.php:329
 msgid "For Example : Moka Pot"
 msgstr "برای مثال : موکاپات"
 
-#: widgets/custom-add-to-cart.php:334 widgets/custom-add-to-cart.php:347
+#: widgets/custom-add-to-cart.php:331 widgets/custom-add-to-cart.php:344
 msgid "Add to Cart"
 msgstr "افزودن به سبد خرید"
 
-#: widgets/custom-add-to-cart.php:340
+#: widgets/custom-add-to-cart.php:337
 msgid "custom price"
 msgstr "مبلغ سفارشی"
 
-#: widgets/custom-add-to-cart.php:341
+#: widgets/custom-add-to-cart.php:338
 msgid "For Example : 300000"
 msgstr "برای مثال : 300000"
 
-#: widgets/custom-add-to-cart.php:345
+#: widgets/custom-add-to-cart.php:342
 msgid "moka pot"
 msgstr "موکاپات"
 
-#: widgets/product-category-widget.php:38
+#: widgets/product-category-widget.php:37
 msgid "Product Categories widget"
 msgstr "ویجت دسته بندی محصولات"
 
-#: widgets/product-category-widget.php:90
+#: widgets/product-category-widget.php:78
 msgid "Layout"
 msgstr "طرح بندی"
 
-#: widgets/product-category-widget.php:101
+#: widgets/product-category-widget.php:86
 msgid "Categories Count"
 msgstr "تعداد دسته بندی ها"
 
-#: widgets/product-category-widget.php:112
+#: widgets/product-category-widget.php:97
 msgid "Query"
 msgstr "کوئری"
 
-#: widgets/product-category-widget.php:120
+#: widgets/product-category-widget.php:105
 msgid "Source"
 msgstr "منبع"
 
-#: widgets/product-category-widget.php:123
+#: widgets/product-category-widget.php:108
 msgid "Show All"
 msgstr "نمایش همه"
 
-#: widgets/product-category-widget.php:124
+#: widgets/product-category-widget.php:109
 msgid "Manual Selection"
 msgstr "انتخاب دستی"
 
-#: widgets/product-category-widget.php:125
+#: widgets/product-category-widget.php:110
 msgid "By Parent"
 msgstr "به وسیله والد"
 
-#: widgets/product-category-widget.php:126
+#: widgets/product-category-widget.php:111
 msgid "Current Subcategories"
 msgstr "زیر دسته در جریان"
 
-#: widgets/product-category-widget.php:142
+#: widgets/product-category-widget.php:127
 msgid "Categories"
 msgstr "دسته بندی ها"
 
-#: widgets/product-category-widget.php:156
+#: widgets/product-category-widget.php:141
 msgid "Exclude Category"
 msgstr "دسته بندی مجزا"
 
-#: widgets/product-category-widget.php:164
+#: widgets/product-category-widget.php:149
 msgid "Only Top Level"
 msgstr "فقط سطح بالا"
 
-#: widgets/product-category-widget.php:168
+#: widgets/product-category-widget.php:153
 msgid "Parent"
 msgstr "والد"
 
-#: widgets/product-category-widget.php:181
+#: widgets/product-category-widget.php:166
 msgid "Hide Empty"
 msgstr "پنهان کردن خالی"
 
-#: widgets/product-category-widget.php:192
+#: widgets/product-category-widget.php:177
 msgid "Order By"
 msgstr "مرتب سازی بر اساس"
 
-#: widgets/product-category-widget.php:196
+#: widgets/product-category-widget.php:181
 msgid "Name"
 msgstr "نام"
 
-#: widgets/product-category-widget.php:197
+#: widgets/product-category-widget.php:182
 msgid "Slug"
 msgstr "اسلاگ"
 
-#: widgets/product-category-widget.php:198
+#: widgets/product-category-widget.php:183
 msgid "Description"
 msgstr "توضیحات"
 
-#: widgets/product-category-widget.php:199
+#: widgets/product-category-widget.php:184
 msgid "Count"
 msgstr "تعداد"
 
-#: widgets/product-category-widget.php:207
+#: widgets/product-category-widget.php:192
 msgid "Order"
 msgstr "ترتیب"
 
-#: widgets/product-category-widget.php:211
+#: widgets/product-category-widget.php:196
 msgid "ASC"
 msgstr "صعودی"
 
-#: widgets/product-category-widget.php:212
+#: widgets/product-category-widget.php:197
 msgid "DESC"
 msgstr "نرولی"
 
-#: widgets/product-category-widget.php:222
+#: widgets/product-category-widget.php:207
 msgid "Products"
 msgstr "محصولات"
 
-#: widgets/product-category-widget.php:232
+#: widgets/product-category-widget.php:217
 msgid ""
 "The style of this widget is often affected by your theme and plugins. If you "
 "experience any such issue, try to switch to a basic theme and deactivate "
@@ -236,32 +236,32 @@ msgstr ""
 "مشکلی مواجه شدید، سعی کنید قالب را به یک قالب ساده تغییر دهید و افزونه‌های "
 "مرتبط را غیرفعال کنید."
 
-#: widgets/product-category-widget.php:251
+#: widgets/product-category-widget.php:233
 msgid "Image"
 msgstr "تصویر"
 
-#: widgets/product-category-widget.php:280
+#: widgets/product-category-widget.php:262
 msgid "Spacing"
 msgstr "فاصله"
 
-#: widgets/product-category-widget.php:292
+#: widgets/product-category-widget.php:274
 #: widgets/vertical-slider-widget.php:553
 msgid "CSS Filters"
 msgstr "فیلتر های css"
 
-#: widgets/product-category-widget.php:300
+#: widgets/product-category-widget.php:282
 msgid "Title"
 msgstr "عنوان"
 
-#: widgets/product-category-widget.php:309
+#: widgets/product-category-widget.php:291
 msgid "Color"
 msgstr "رنگ"
 
-#: widgets/product-category-widget.php:333
+#: widgets/product-category-widget.php:315
 msgid "Title Spacing"
 msgstr "فاصله"
 
-#: widgets/product-category-widget.php:344
+#: widgets/product-category-widget.php:326
 #: widgets/vertical-slider-widget.php:217
 #: widgets/vertical-slider-widget.php:280
 #: widgets/vertical-slider-widget.php:331
@@ -269,43 +269,43 @@ msgstr "فاصله"
 msgid "Alignment"
 msgstr "ترازبندی"
 
-#: widgets/product-category-widget.php:348
+#: widgets/product-category-widget.php:330
 msgid "Left"
 msgstr "چپ"
 
-#: widgets/product-category-widget.php:352
+#: widgets/product-category-widget.php:334
 #: widgets/vertical-slider-widget.php:225
 #: widgets/vertical-slider-widget.php:288
 #: widgets/vertical-slider-widget.php:436
 msgid "Center"
 msgstr "وسط"
 
-#: widgets/product-category-widget.php:356
+#: widgets/product-category-widget.php:338
 msgid "Right"
 msgstr "راست"
 
-#: widgets/product-category-widget.php:371
+#: widgets/product-category-widget.php:353
 msgid "wrapper style"
 msgstr "استایل نگهدارنده"
 
-#: widgets/product-category-widget.php:378
+#: widgets/product-category-widget.php:360
 msgid "wrapper padding"
 msgstr "فاصله داخلی نگهدارنده"
 
-#: widgets/product-category-widget.php:390
+#: widgets/product-category-widget.php:372
 msgid "wrapepr background"
 msgstr "پس زمینه نگهدارنده"
 
-#: widgets/product-category-widget.php:399
+#: widgets/product-category-widget.php:381
 msgid "wrapper shadow"
 msgstr "سایه نگهدارنده"
 
-#: widgets/product-category-widget.php:406
+#: widgets/product-category-widget.php:388
 #: widgets/vertical-slider-widget.php:461
 msgid "wrapper width"
 msgstr "عرض نگهدارنده"
 
-#: widgets/product-category-widget.php:450
+#: widgets/product-category-widget.php:431
 msgid "No results found. "
 msgstr "هیچ نتیجه ای پیدا نشد. "
 
@@ -487,7 +487,7 @@ msgid "Custom plugins that we can add to our Elementor."
 msgstr "افزونه های سفارشی که میتونیم به المنتور خودمون اضافه کنیم."
 
 #. Author of the plugin/theme
-msgid "farzane nazmabadi"
+msgid "Farzane Nazmabadi"
 msgstr "فرزانه نظم آبادی"
 
 #. Author URI of the plugin/theme

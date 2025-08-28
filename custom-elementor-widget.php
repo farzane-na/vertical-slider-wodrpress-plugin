@@ -17,8 +17,9 @@ function translate_plugin() {
     load_plugin_textdomain( 'farzane-widget', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 add_action( 'plugins_loaded', 'translate_plugin' );
-require_once plugin_dir_path(__FILE__) . 'admin/admin-dashboard.php';
 define('WELCOME_IMAGE_FARZANE',plugin_dir_url(__FILE__)."asset/images/coffee.webp");
+require_once plugin_dir_path(__FILE__) . 'admin/admin-dashboard.php';
+// Register the widget.
 add_action( 'elementor/init', 'init_custom_elementor_widgets' );
 function init_custom_elementor_widgets() {
     require_once __DIR__ . '/widgets/vertical-slider-widget.php';

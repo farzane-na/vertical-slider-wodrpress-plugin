@@ -3,7 +3,7 @@ function farzaneh_custom_dashboard_widget() {
 
     wp_add_dashboard_widget(
         'farzaneh_welcome_widget',
-        'خوش آمدید❤️☕',
+        'خوش آمدید',
         'farzaneh_welcome_widget_content'
     );
 }

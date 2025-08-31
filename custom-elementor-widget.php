@@ -2,7 +2,7 @@
 /**
  * Plugin Name: custom elementor widgets
  * Description: Custom plugins that we can add to our Elementor.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Requires PHP:      7.4
  * Author: Farzane Nazmabadi
  * Author URI:        https://farzanenazmabadi.ir/
